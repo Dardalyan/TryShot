@@ -1,23 +1,35 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")] 
-    [SerializeField] private float moveSpeed;
+    private float moveSpeed;
+
+    [SerializeField] private float walkSpeed;
+    [SerializeField] private float sprintSpeed;
 
     [SerializeField] private float groundDrag;
 
+    [Header("Jumping")]
     [SerializeField] private float jumpForce;
     [SerializeField] private float jumpCooldown;
     [SerializeField] private float airMultiplier;
     private bool readyToJump;
 
-    [Header("Keybinds")] 
-    [SerializeField] private KeyCode jumpKey = KeyCode.Space;
+    [Header("Crouching")] 
+    [SerializeField] private float crouchSpeed;
+    [SerializeField] private float crouchYScale;
+    private float startYScale;
 
+    [Header("Keybinds")] 
+    [SerializeField] private KeyCode jumpKey = KeyCode.Space; 
+    [SerializeField] private KeyCode sprintKey = KeyCode.LeftShift;
+    [SerializeField] private KeyCode crouchKey = KeyCode.LeftControl;
+    
     [Header("Ground Check")] 
     [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask ground;
@@ -31,11 +43,24 @@ public class PlayerMovement : MonoBehaviour
     private Vector3 moveDirection;
 
     private Rigidbody myRigidBody;
+
+    [SerializeField] private MovementState movementState;
+
+    [SerializeField] enum MovementState
+    {
+        walking,
+        sprinting,
+        crouching,
+        air
+    }
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody>();
         myRigidBody.freezeRotation = true;
+        
         readyToJump = true;
+
+        startYScale = transform.localScale.y;
     }
     
     void Update()
@@ -55,6 +80,7 @@ public class PlayerMovement : MonoBehaviour
         
         MyInput();
         SpeedControl();
+        StateHandler();
     }
 
     private void FixedUpdate()
@@ -76,8 +102,50 @@ public class PlayerMovement : MonoBehaviour
             //continuously jump while holding jump key (expensive!)
             Invoke(nameof(ResetJump), jumpCooldown);
         }
+        
+        //crouch
+        if (Input.GetKeyDown(crouchKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, crouchYScale, transform.localScale.z);
+            //to not float in the air after crouching
+            myRigidBody.AddForce(Vector3.down * 5f, ForceMode.Impulse);
+        }
+        
+        //stop crouching
+        if (Input.GetKeyUp(crouchKey))
+        {
+            transform.localScale = new Vector3(transform.localScale.x, startYScale, transform.localScale.z);
+        }
     }
 
+    private void StateHandler()
+    {
+        //crouching
+        if (Input.GetKey(crouchKey))
+        {
+            movementState = MovementState.crouching;
+            moveSpeed = crouchSpeed;
+        }
+        //sprinting
+        if (grounded && Input.GetKey(sprintKey))
+        {
+            movementState = MovementState.sprinting;
+            moveSpeed = sprintSpeed;
+        }
+        
+        //walking
+        else if (grounded)
+        {
+            movementState = MovementState.walking;
+            moveSpeed = walkSpeed;
+        }
+
+        //air
+        else
+        {
+            movementState = MovementState.air;
+        }
+    }
     private void MovePlayer()
     {
         //calculate movement direction
