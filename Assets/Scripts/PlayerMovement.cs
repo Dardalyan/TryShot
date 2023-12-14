@@ -34,6 +34,12 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask ground;
     private bool grounded;
+
+    [Header("Slope Check")] 
+    [SerializeField] private float maxSlopeAngle;
+    private RaycastHit slopeRaycastHit;
+    private bool exitingSlope;
+    
     
     [SerializeField] private Transform orientation;
 
@@ -127,7 +133,7 @@ public class PlayerMovement : MonoBehaviour
             moveSpeed = crouchSpeed;
         }
         //sprinting
-        if (grounded && Input.GetKey(sprintKey))
+        else if (grounded && Input.GetKey(sprintKey))
         {
             movementState = MovementState.sprinting;
             moveSpeed = sprintSpeed;
@@ -151,34 +157,64 @@ public class PlayerMovement : MonoBehaviour
         //calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         
+        //on slope
+        if (OnSlope() && !exitingSlope)
+        {
+            myRigidBody.AddForce(GetSlopeMoveDirection() * (moveSpeed * 20f), ForceMode.Force);
+            
+            //to stop the player from bumping on the slope and jumping, add a downward force and keep the player on the slope
+            if (myRigidBody.velocity.y > 0)
+            {
+                myRigidBody.AddForce(Vector3.down * 80f, ForceMode.Force);
+            }
+        }
+        
         //on ground
         //10f for smaller numbers in inspector
-        if (grounded)
+        else if (grounded)
         {
-            myRigidBody.AddForce(moveDirection.normalized * moveSpeed * 10f, ForceMode.Force);
+            myRigidBody.AddForce(moveDirection.normalized * (moveSpeed * 10f), ForceMode.Force);
         }
-        //air
+        //in air
         else if (!grounded)
         {
-            myRigidBody.AddForce(moveDirection.normalized * moveSpeed * 10f * airMultiplier, ForceMode.Force);
+            myRigidBody.AddForce(moveDirection.normalized * (moveSpeed * 10f * airMultiplier), ForceMode.Force);
         }
+        
+        //turn gravity off while on slope
+        myRigidBody.useGravity = !OnSlope();
     }
 
     private void SpeedControl()
     {
-        Vector3 flatVelocity = new Vector3(myRigidBody.velocity.x, 0f, myRigidBody.velocity.z);
-        
-        //limit velocity if max speed exceeded
-        if (flatVelocity.magnitude > moveSpeed)
+        //limiting speed on slope
+        if (OnSlope() && !exitingSlope)
         {
-            //what the max velocity should be
-            Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
-            myRigidBody.velocity = new Vector3(limitedVelocity.x, myRigidBody.velocity.y, limitedVelocity.z);
+            if (myRigidBody.velocity.magnitude > moveSpeed)
+            {
+                myRigidBody.velocity = myRigidBody.velocity.normalized * moveSpeed;
+            }
+        }
+
+        //limiting speed on ground or in air
+        else
+        {
+            Vector3 flatVelocity = new Vector3(myRigidBody.velocity.x, 0f, myRigidBody.velocity.z);
+
+            //limit velocity if max speed exceeded
+            if (flatVelocity.magnitude > moveSpeed)
+            {
+                //what the max velocity should be
+                Vector3 limitedVelocity = flatVelocity.normalized * moveSpeed;
+                myRigidBody.velocity = new Vector3(limitedVelocity.x, myRigidBody.velocity.y, limitedVelocity.z);
+            }
         }
     }
 
     private void Jump()
     {
+        exitingSlope = true;
+        
         //reset y velocity
         myRigidBody.velocity = new Vector3(myRigidBody.velocity.x, 0f, myRigidBody.velocity.z);
         
@@ -188,5 +224,23 @@ public class PlayerMovement : MonoBehaviour
     private void ResetJump()
     {
         readyToJump = true;
+
+        exitingSlope = false;
+    }
+
+    private bool OnSlope()
+    {   //"out" stores the information of the object hit
+        if (Physics.Raycast(transform.position, Vector3.down, out slopeRaycastHit, playerHeight * 0.5f + 0.3f))
+        {
+            float angle = Vector3.Angle(Vector3.up, slopeRaycastHit.normal);
+            return angle < maxSlopeAngle && angle != 0;
+        }
+
+        return false;
+    }
+
+    private Vector3 GetSlopeMoveDirection()
+    {
+        return Vector3.ProjectOnPlane(moveDirection, slopeRaycastHit.normal).normalized;
     }
 }
