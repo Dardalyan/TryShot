@@ -8,10 +8,17 @@ public class PlayerMovement : MonoBehaviour
 {
     [Header("Movement")] 
     private float moveSpeed;
-
     [SerializeField] private float walkSpeed;
     [SerializeField] private float sprintSpeed;
+    [SerializeField] private float slideSpeed;
+    
+    private float desiredMoveSpeed;
+    private float lastDesiredMoveSpeed;
 
+    [SerializeField] private float speedIncreaseMultiplier;
+    [SerializeField] private float slopeIncreaseMultiplier;
+    
+    
     [SerializeField] private float groundDrag;
 
     [Header("Jumping")]
@@ -52,13 +59,17 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private MovementState movementState;
 
-    [SerializeField] enum MovementState
+    public enum MovementState
     {
         walking,
         sprinting,
         crouching,
+        sliding,
         air
     }
+
+    public bool isSliding;
+    
     void Start()
     {
         myRigidBody = GetComponent<Rigidbody>();
@@ -126,24 +137,38 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+        //sliding
+        if (isSliding)
+        {
+            movementState = MovementState.sliding;
+
+            if (OnSlope() && myRigidBody.velocity.y < 0.1f)
+            {
+                desiredMoveSpeed = slideSpeed;
+            }
+            else
+            {
+                desiredMoveSpeed = sprintSpeed;
+            }
+        }
         //crouching
         if (Input.GetKey(crouchKey))
         {
             movementState = MovementState.crouching;
-            moveSpeed = crouchSpeed;
+            desiredMoveSpeed = crouchSpeed;
         }
         //sprinting
         else if (grounded && Input.GetKey(sprintKey))
         {
             movementState = MovementState.sprinting;
-            moveSpeed = sprintSpeed;
+            desiredMoveSpeed = sprintSpeed;
         }
         
         //walking
         else if (grounded)
         {
             movementState = MovementState.walking;
-            moveSpeed = walkSpeed;
+            desiredMoveSpeed = walkSpeed;
         }
 
         //air
@@ -151,7 +176,52 @@ public class PlayerMovement : MonoBehaviour
         {
             movementState = MovementState.air;
         }
+        
+        //check if desiredMoveSpeed has changed drastically. if the move speed changed more than 4, don't change it instantly but lerp it slowly, thus keeping the momentum
+        if (Mathf.Abs(desiredMoveSpeed - lastDesiredMoveSpeed) > 8f && moveSpeed != 0)
+        {
+            StopAllCoroutines();
+            StartCoroutine(SmoothlyLerpMoveSpeed());
+        }
+        else
+        {
+            moveSpeed = desiredMoveSpeed;
+        }
+
+        lastDesiredMoveSpeed = desiredMoveSpeed;
     }
+
+    //coroutine
+    private IEnumerator SmoothlyLerpMoveSpeed()
+    {
+        //smoothly lerp moveSpeed to desired value
+        float time = 0;
+        float difference = Mathf.Abs(desiredMoveSpeed - moveSpeed);
+        float startValue = moveSpeed;
+
+        while (time < difference)
+        {
+            moveSpeed = Mathf.Lerp(startValue, desiredMoveSpeed, time / difference);
+
+            if (OnSlope())
+            {
+                //steeper slope = more acceleration
+                float slopeAngle = Vector3.Angle(Vector3.up, slopeRaycastHit.normal);
+                float slopeAngleIncrease = 1 + (slopeAngle / 90f);
+                
+                time += Time.deltaTime * speedIncreaseMultiplier * slopeIncreaseMultiplier * slopeAngleIncrease;
+            }
+            else
+            {
+                time += Time.deltaTime * speedIncreaseMultiplier;
+            }
+            
+            yield return null;
+        }
+
+        moveSpeed = desiredMoveSpeed;
+    }
+    
     private void MovePlayer()
     {
         //calculate movement direction
@@ -160,7 +230,7 @@ public class PlayerMovement : MonoBehaviour
         //on slope
         if (OnSlope() && !exitingSlope)
         {
-            myRigidBody.AddForce(GetSlopeMoveDirection() * (moveSpeed * 20f), ForceMode.Force);
+            myRigidBody.AddForce(GetSlopeMoveDirection(moveDirection) * (moveSpeed * 20f), ForceMode.Force);
             
             //to stop the player from bumping on the slope and jumping, add a downward force and keep the player on the slope
             if (myRigidBody.velocity.y > 0)
@@ -228,7 +298,7 @@ public class PlayerMovement : MonoBehaviour
         exitingSlope = false;
     }
 
-    private bool OnSlope()
+    public bool OnSlope()
     {   //"out" stores the information of the object hit
         if (Physics.Raycast(transform.position, Vector3.down, out slopeRaycastHit, playerHeight * 0.5f + 0.3f))
         {
@@ -239,8 +309,8 @@ public class PlayerMovement : MonoBehaviour
         return false;
     }
 
-    private Vector3 GetSlopeMoveDirection()
+    public Vector3 GetSlopeMoveDirection(Vector3 direction)
     {
-        return Vector3.ProjectOnPlane(moveDirection, slopeRaycastHit.normal).normalized;
+        return Vector3.ProjectOnPlane(direction, slopeRaycastHit.normal).normalized;
     }
 }
