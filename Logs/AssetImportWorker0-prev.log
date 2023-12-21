@@ -2,8 +2,8 @@ Unity Editor version:    2022.3.11f1 (d00248457e15)
 Branch:                  2022.3/staging
 Build type:              Release
 Batch mode:              YES
-macOS version:           Version 14.1.1 (Build 23B81)
-Darwin version:          23.1.0
+macOS version:           Version 14.2 (Build 23C64)
+Darwin version:          23.2.0
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
@@ -22,7 +22,7 @@ AssetImportWorker0
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-53152
+49766
 Successfully changed project path to: /Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo
 /Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
@@ -56,12 +56,12 @@ Successfully changed project path to: /Users/dardalyan/Documents/IEU-Sem1-2023:2
     "memorysetup-temp-allocator-size-cloud-worker=32768"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [8000462528] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 213148135 [EditorId] 213148135 [Version] 1048832 [Id] OSXEditor(0,Dardalyan-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
+Player connection [7990267904] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 3978256475 [EditorId] 3978256475 [Version] 1048832 [Id] OSXEditor(0,Dardalyan-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined multi-casting on [225.0.0.222:54997]...
 
-Player connection [8000462528] Host "[IP] 192.168.1.105 [Port] 0 [Flags] 2 [Guid] 213148135 [EditorId] 213148135 [Version] 1048832 [Id] OSXEditor(0,Dardalyan-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [7990267904] Host "[IP] 192.168.1.100 [Port] 0 [Flags] 2 [Guid] 3978256475 [EditorId] 3978256475 [Version] 1048832 [Id] OSXEditor(0,Dardalyan-MacBook-Pro.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" joined alternative multi-casting on [225.0.0.222:34997]...
 
 [Physics::Module] Initialized MultithreadedJobDispatcher with 9 workers.
-Refreshing native plugins compatible for Editor in 3.24 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 2.04 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2022.3.11f1 (d00248457e15)
 [Subsystems] Discovering subsystems at path /Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Resources/UnitySubsystems
@@ -76,44 +76,44 @@ Initialize mono
 Mono path[0] = '/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56998
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56350
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
-Registered in 0.001016 seconds.
-- Loaded All Assemblies, in  0.183 seconds
+Registered in 0.000776 seconds.
+- Loaded All Assemblies, in  0.177 seconds
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.135 seconds
-Domain Reload Profiling: 318ms
-	BeginReloadAssembly (43ms)
+- Finished resetting the current domain, in  0.131 seconds
+Domain Reload Profiling: 308ms
+	BeginReloadAssembly (44ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
 	RebuildCommonClasses (21ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (27ms)
-	LoadAllAssembliesAndSetupDomain (84ms)
-		LoadAssemblies (42ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (78ms)
+		LoadAssemblies (44ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (84ms)
-			TypeCache.Refresh (83ms)
-				TypeCache.ScanAssembly (74ms)
+		AnalyzeDomain (77ms)
+			TypeCache.Refresh (76ms)
+				TypeCache.ScanAssembly (69ms)
 			ScanForSourceGeneratedMonoScriptInfo (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (136ms)
+	FinalizeReload (132ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (100ms)
+		SetupLoadedEditorAssemblies (99ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (3ms)
 			SetLoadedEditorAssemblies (4ms)
 			RefreshPlugins (0ms)
 			BeforeProcessingInitializeOnLoad (1ms)
-			ProcessInitializeOnLoadAttributes (68ms)
-			ProcessInitializeOnLoadMethodAttributes (24ms)
+			ProcessInitializeOnLoadAttributes (66ms)
+			ProcessInitializeOnLoadMethodAttributes (25ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -121,8 +121,8 @@ Domain Reload Profiling: 318ms
 ========================================================================
 Worker process is ready to serve import requests
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.297 seconds
-Refreshing native plugins compatible for Editor in 0.66 ms, found 2 plugins.
+- Loaded All Assemblies, in  0.288 seconds
+Refreshing native plugins compatible for Editor in 1.00 ms, found 2 plugins.
 Native extension for OSXStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
@@ -130,112 +130,48 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.283 seconds
-Domain Reload Profiling: 581ms
-	BeginReloadAssembly (68ms)
+Domain Reload Profiling: 571ms
+	BeginReloadAssembly (64ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (16ms)
-	RebuildCommonClasses (21ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (19ms)
-	LoadAllAssembliesAndSetupDomain (182ms)
-		LoadAssemblies (109ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (103ms)
-			TypeCache.Refresh (93ms)
-				TypeCache.ScanAssembly (83ms)
-			ScanForSourceGeneratedMonoScriptInfo (6ms)
-			ResolveRequiredComponents (2ms)
-	FinalizeReload (284ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (198ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (2ms)
-			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (27ms)
-			ProcessInitializeOnLoadAttributes (157ms)
-			ProcessInitializeOnLoadMethodAttributes (9ms)
-			AfterProcessingInitializeOnLoad (1ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (3ms)
-Launching external process: /Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3082 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 32 unused Assets / (52.0 KB). Loaded Objects now: 3560.
-Memory consumption went from 136.6 MB to 136.6 MB.
-Total: 2.025041 ms (FindLiveObjects: 0.101000 ms CreateObjectMapping: 0.046375 ms MarkObjects: 1.803333 ms  DeleteObjects: 0.073834 ms)
-
-AssetImportParameters requested are different than current active one (requested -> active):
-  custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
-  custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
-  custom:container-demuxer-webm: 4f35f7cbe854078d1ac9338744f61a02 -> 
-  custom:container-muxer-webm: aa71ff27fc2769a1b78a27578f13a17b -> 
-  custom:video-decoder-webm-vp8: 9c59270c3fd7afecdb556c50c9e8de78 -> 
-  custom:AudioImporter_EditorPlatform: 3918e3fc78b5a79bad01e8451be0beb8 -> 
-  custom:framework-osx-AVFoundation: e770b220cccbd017edd2c1fefb359320 -> 
-  custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
-  custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-  custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
-========================================================================
-Received Prepare
-Begin MonoManager ReloadAssembly
-Thread 0x2897c3000 may have been prematurely finalized
-- Loaded All Assemblies, in  0.217 seconds
-Refreshing native plugins compatible for Editor in 0.63 ms, found 2 plugins.
-Native extension for OSXStandalone target not found
-[Package Manager] Server::EnsureServerProcessIsRunning -- launch failed, reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] UpmClient::Send -- Unable to send message (not connected to UPM process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.572 seconds
-Domain Reload Profiling: 789ms
-	BeginReloadAssembly (78ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (2ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (24ms)
+		CreateAndSetChildDomain (15ms)
 	RebuildCommonClasses (20ms)
 	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (11ms)
-	LoadAllAssembliesAndSetupDomain (101ms)
-		LoadAssemblies (123ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (178ms)
+		LoadAssemblies (110ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (7ms)
-			TypeCache.Refresh (4ms)
-				TypeCache.ScanAssembly (0ms)
-			ScanForSourceGeneratedMonoScriptInfo (0ms)
+		AnalyzeDomain (97ms)
+			TypeCache.Refresh (88ms)
+				TypeCache.ScanAssembly (79ms)
+			ScanForSourceGeneratedMonoScriptInfo (6ms)
 			ResolveRequiredComponents (2ms)
-	FinalizeReload (572ms)
+	FinalizeReload (283ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (181ms)
+		SetupLoadedEditorAssemblies (201ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
 			SetLoadedEditorAssemblies (2ms)
 			RefreshPlugins (0ms)
-			BeforeProcessingInitializeOnLoad (27ms)
-			ProcessInitializeOnLoadAttributes (141ms)
-			ProcessInitializeOnLoadMethodAttributes (9ms)
+			BeforeProcessingInitializeOnLoad (28ms)
+			ProcessInitializeOnLoadAttributes (158ms)
+			ProcessInitializeOnLoadMethodAttributes (10ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (2ms)
-Refreshing native plugins compatible for Editor in 0.84 ms, found 2 plugins.
+Launching external process: /Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
+Refreshing native plugins compatible for Editor in 0.57 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 3075 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 23 unused Assets / (31.0 KB). Loaded Objects now: 3563.
-Memory consumption went from 142.2 MB to 142.2 MB.
-Total: 2.044375 ms (FindLiveObjects: 0.115500 ms CreateObjectMapping: 0.038958 ms MarkObjects: 1.858042 ms  DeleteObjects: 0.031458 ms)
+Unloading 3126 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 32 unused Assets / (51.2 KB). Loaded Objects now: 3604.
+Memory consumption went from 137.6 MB to 137.5 MB.
+Total: 2.230250 ms (FindLiveObjects: 0.110000 ms CreateObjectMapping: 0.045250 ms MarkObjects: 2.011041 ms  DeleteObjects: 0.063416 ms)
 
-Prepare: number of updated asset objects reloaded= 0
 AssetImportParameters requested are different than current active one (requested -> active):
   custom:container-demuxer-ogg: 62fdf1f143b41e24485cea50d1cbac27 -> 
   custom:video-decoder-ogg-theora: a1e56fd34408186e4bbccfd4996cb3dc -> 
@@ -249,3 +185,187 @@ AssetImportParameters requested are different than current active one (requested
   custom:video-encoder-webm-vp8: eb34c28f22e8b96e1ab97ce403110664 -> 
   custom:audio-decoder-ogg-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
   custom:audio-encoder-webm-vorbis: bf7c407c2cedff20999df2af8eb42d56 -> 
+========================================================================
+Received Import Request.
+  Time since last request: 69658.708204 seconds.
+  path: Assets/Desert City Pack/Textures/Stone_Floor_AO.png
+  artifactKey: Guid(86d3c44822ab67f4c93e105f9182965d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Stone_Floor_AO.png using Guid(86d3c44822ab67f4c93e105f9182965d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '40fef899f21c8e6e557f2784bfd63ae2') in 0.058274 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Desert City Pack/Textures/Flat_stone_AO.png
+  artifactKey: Guid(f48c876279c00574aabd0404fd900f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Flat_stone_AO.png using Guid(f48c876279c00574aabd0404fd900f05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22277ae784b5081febf732b808cdad33') in 0.003716 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000069 seconds.
+  path: Assets/Desert City Pack/Textures/Old_stucco_NM_1.png
+  artifactKey: Guid(fe4f5da1a962e814eb60cbdcf666c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Old_stucco_NM_1.png using Guid(fe4f5da1a962e814eb60cbdcf666c7e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1507ea51b8f02281f68b4316bb0830dc') in 0.063576 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/Desert City Pack/Textures/Black.png
+  artifactKey: Guid(96835bdfc8b0f7144b7cccc2478f7fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Black.png using Guid(96835bdfc8b0f7144b7cccc2478f7fd1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb329e75cf98b486148b56f23639c658') in 0.003003 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000065 seconds.
+  path: Assets/Desert City Pack/Textures/Ground_NM.png
+  artifactKey: Guid(64c5dae596bb15c40afece63c22a321f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Ground_NM.png using Guid(64c5dae596bb15c40afece63c22a321f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a88a58751501d60ffb83e40a78d40bf7') in 0.005860 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Desert City Pack/Textures/Rope_ao.png
+  artifactKey: Guid(08e40626eabe5774a8685ec8ce396dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Rope_ao.png using Guid(08e40626eabe5774a8685ec8ce396dfa) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6656fcf14b92a547a1c7a724ca87ced0') in 0.003666 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000099 seconds.
+  path: Assets/Desert City Pack/Textures/Stone_wall_AO.png
+  artifactKey: Guid(9a216d45bbc0c9f47a37010d219300a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Stone_wall_AO.png using Guid(9a216d45bbc0c9f47a37010d219300a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9fb64920a39db886a30e2cd14c3802ee') in 0.003617 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000058 seconds.
+  path: Assets/Desert City Pack/Textures/Wood_fence_DP.png
+  artifactKey: Guid(c00cf5359c753d745b8830cfa9e94429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Wood_fence_DP.png using Guid(c00cf5359c753d745b8830cfa9e94429) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a440b8e1da0dc1285c9611e1deef2557') in 0.003218 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000093 seconds.
+  path: Assets/Desert City Pack/Textures/Ground_AO.png
+  artifactKey: Guid(13c683fe9a4c59a44a21aede5c36a2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Ground_AO.png using Guid(13c683fe9a4c59a44a21aede5c36a2c6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3483891515a3cfafbad50604a64d9336') in 0.005353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Desert City Pack/Textures/Flat_stone_AL_2.png
+  artifactKey: Guid(5c8110fd5372c584e9ff81461e604e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Flat_stone_AL_2.png using Guid(5c8110fd5372c584e9ff81461e604e41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '63fcd69ab870421333b644de3d6bfd7f') in 0.003918 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000085 seconds.
+  path: Assets/Desert City Pack/Textures/Rope_dp.png
+  artifactKey: Guid(5b028ee263d5c9b4ea898c1b5c76dd00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Rope_dp.png using Guid(5b028ee263d5c9b4ea898c1b5c76dd00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce01bb87b3d96cd171002372d8d5cc7d') in 0.002971 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000077 seconds.
+  path: Assets/Desert City Pack/Textures/Ground_SP.png
+  artifactKey: Guid(72048ff9b8d757241ab9e30503eaa1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Ground_SP.png using Guid(72048ff9b8d757241ab9e30503eaa1d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b7f1808a856f7049894237ebe4920c67') in 0.005543 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000105 seconds.
+  path: Assets/Desert City Pack/Textures/Flat_stone_SP.png
+  artifactKey: Guid(b3801646772eea14bb6b086e0c68542d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Flat_stone_SP.png using Guid(b3801646772eea14bb6b086e0c68542d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bb4e6f690d32dbea8c246c99d0ab5020') in 0.004054 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000086 seconds.
+  path: Assets/Desert City Pack/Textures/Stone_wall_DP.png
+  artifactKey: Guid(c70fe7a10b131414089549a17995a5ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Stone_wall_DP.png using Guid(c70fe7a10b131414089549a17995a5ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '965ba4ba14f561eefb0cfdf193e02991') in 0.005616 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Desert City Pack/Textures/Old_stucco_SP_1.png
+  artifactKey: Guid(24c06112e1d8d4e478803e90b776c717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Old_stucco_SP_1.png using Guid(24c06112e1d8d4e478803e90b776c717) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fcd228638af193b726decc11c3aafc83') in 0.004353 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000066 seconds.
+  path: Assets/Desert City Pack/Textures/Stone_wall_SP.png
+  artifactKey: Guid(e6c2263cd1757104e85e9f79101be52f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Stone_wall_SP.png using Guid(e6c2263cd1757104e85e9f79101be52f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2593cd0a04f545349fe7c14e6a4133ff') in 0.003663 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000071 seconds.
+  path: Assets/Desert City Pack/Textures/Old_stucco_AL_2.png
+  artifactKey: Guid(3b1cd1f6b60b4c447b1adc2c20cc5814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Old_stucco_AL_2.png using Guid(3b1cd1f6b60b4c447b1adc2c20cc5814) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '99035f19d3526962195061abf9ea7558') in 0.003729 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000046 seconds.
+  path: Assets/Desert City Pack/Textures/Old_stucco_AO_1.png
+  artifactKey: Guid(839f7c133ce43dd44ac12e06a9b68557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Old_stucco_AO_1.png using Guid(839f7c133ce43dd44ac12e06a9b68557) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '90b21ae4a97ea108ceee4ff1fbcbdb1c') in 0.003608 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Desert City Pack/Textures/Fabric_tent_1_nm.png
+  artifactKey: Guid(cd2d88d561025cc42a977506eb64ee15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Fabric_tent_1_nm.png using Guid(cd2d88d561025cc42a977506eb64ee15) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ccf2962588e2e35419a6a90529147021') in 0.003999 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000087 seconds.
+  path: Assets/Desert City Pack/Textures/MudBricks_AL.png
+  artifactKey: Guid(b8bfb8a3e5fb1aa4a9ef27b9d648263f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/MudBricks_AL.png using Guid(b8bfb8a3e5fb1aa4a9ef27b9d648263f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '163e5b584beb2068616f4434bb5a40a5') in 0.003536 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000063 seconds.
+  path: Assets/Desert City Pack/Textures/Stone_wall_NM.png
+  artifactKey: Guid(3e8ebfb051eccf948adda77d4173cced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Stone_wall_NM.png using Guid(3e8ebfb051eccf948adda77d4173cced) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a480a253c3d445bca4db8b455217cae1') in 0.004667 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000103 seconds.
+  path: Assets/Desert City Pack/Textures/Stone_Floor_SP.png
+  artifactKey: Guid(8ed4e361d4ba5c04597b30357778ba9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/Stone_Floor_SP.png using Guid(8ed4e361d4ba5c04597b30357778ba9b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9b919dfaec30a8d110a23fb5c221876e') in 0.005614 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
+========================================================================
+Received Import Request.
+  Time since last request: 0.000053 seconds.
+  path: Assets/Desert City Pack/Textures/MudBricks_NM.png
+  artifactKey: Guid(8ce5ec88a45282849b2f168766a8cba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Desert City Pack/Textures/MudBricks_NM.png using Guid(8ce5ec88a45282849b2f168766a8cba1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6087c69fc815515a165ad1b695a900c5') in 0.004427 seconds
+Number of updated asset objects reloaded before import = 0
+Number of asset objects unloaded after import = 2
