@@ -6260,6 +6260,10 @@ PrefabInstance:
       propertyPath: cameraPosition
       value: 
       objectReference: {fileID: 1742515677}
+    - target: {fileID: 6295616119594685768, guid: b4bdb9082d6764399a2b089827088509, type: 3}
+      propertyPath: near clip plane
+      value: 0.1
+      objectReference: {fileID: 0}
     - target: {fileID: 7810685659676138446, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: m_Name
       value: CameraHolder
