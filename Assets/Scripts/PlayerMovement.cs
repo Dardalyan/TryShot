@@ -11,6 +11,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float walkSpeed;
     [SerializeField] private float sprintSpeed;
     [SerializeField] private float slideSpeed;
+    [SerializeField] private float wallRunSpeed;
     
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -65,10 +66,12 @@ public class PlayerMovement : MonoBehaviour
         sprinting,
         crouching,
         sliding,
-        air
+        air,
+        wallrunning
     }
 
     public bool isSliding;
+    public bool wallrunning;
     
     void Start()
     {
@@ -137,6 +140,13 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+        //wallrunning
+        if (wallrunning)
+        {
+            movementState = MovementState.wallrunning;
+            desiredMoveSpeed = wallRunSpeed;
+        }
+        
         //sliding
         if (isSliding)
         {
