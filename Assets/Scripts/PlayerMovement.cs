@@ -12,6 +12,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float sprintSpeed;
     [SerializeField] private float slideSpeed;
     [SerializeField] private float wallRunSpeed;
+    [SerializeField] private float climbSpeed;
     
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -41,12 +42,15 @@ public class PlayerMovement : MonoBehaviour
     [Header("Ground Check")] 
     [SerializeField] private float playerHeight;
     [SerializeField] private LayerMask ground;
-    private bool grounded;
+    public bool grounded;
 
     [Header("Slope Check")] 
     [SerializeField] private float maxSlopeAngle;
     private RaycastHit slopeRaycastHit;
     private bool exitingSlope;
+
+    [Header("References")] 
+    [SerializeField] private Climbing climbingScript;
     
     
     [SerializeField] private Transform orientation;
@@ -67,11 +71,13 @@ public class PlayerMovement : MonoBehaviour
         crouching,
         sliding,
         air,
-        wallrunning
+        wallrunning,
+        climbing
     }
 
     public bool isSliding;
     public bool wallrunning;
+    public bool isClimbing;
     
     void Start()
     {
@@ -140,8 +146,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+        //climbing
+        if (isClimbing)
+        {
+            movementState = MovementState.climbing;
+            desiredMoveSpeed = climbSpeed;
+        }
+        
         //wallrunning
-        if (wallrunning)
+        else if (wallrunning)
         {
             movementState = MovementState.wallrunning;
             desiredMoveSpeed = wallRunSpeed;
@@ -234,6 +247,11 @@ public class PlayerMovement : MonoBehaviour
     
     private void MovePlayer()
     {
+        if (climbingScript.exitingWall)
+        {
+            return;
+        }
+        
         //calculate movement direction
         moveDirection = orientation.forward * verticalInput + orientation.right * horizontalInput;
         

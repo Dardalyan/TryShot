@@ -47,6 +47,7 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/PlayerCam.cs" />
      <Compile Include="Assets/Scripts/WallRunning.cs" />
+     <Compile Include="Assets/Scripts/Climbing.cs" />
      <Compile Include="Assets/Scripts/MoveCamera.cs" />
      <Compile Include="Assets/Scripts/Sliding.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 890958859252560735}
   - component: {fileID: 2846036310798790627}
   - component: {fileID: 989399736276955285}
+  - component: {fileID: 7210658248284824926}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -112,6 +113,7 @@ MonoBehaviour:
   sprintSpeed: 10
   slideSpeed: 30
   wallRunSpeed: 8.5
+  climbSpeed: 3
   speedIncreaseMultiplier: 1.5
   slopeIncreaseMultiplier: 2.5
   groundDrag: 4
@@ -127,11 +129,14 @@ MonoBehaviour:
   ground:
     serializedVersion: 2
     m_Bits: 64
+  grounded: 0
   maxSlopeAngle: 60
+  climbingScript: {fileID: 7210658248284824926}
   orientation: {fileID: 3379936926764207333}
   movementState: 0
   isSliding: 0
   wallrunning: 0
+  isClimbing: 0
 --- !u!114 &2846036310798790627
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -183,6 +188,36 @@ MonoBehaviour:
   gravityCounterForce: 0
   orientation: {fileID: 3379936926764207333}
   playerCam: {fileID: 0}
+--- !u!114 &7210658248284824926
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1283639442094980559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86fede14669e64442b370ef51cf63c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orientation: {fileID: 3379936926764207333}
+  myRigidbody: {fileID: 831511806234207534}
+  wall:
+    serializedVersion: 2
+    m_Bits: 128
+  playerMovement: {fileID: 890958859252560735}
+  climbSpeed: 10
+  maxClimbTime: 0.75
+  climbJumpUpForce: 14
+  climbJumpBackForce: 12
+  jumpKey: 32
+  climbJumps: 1
+  detectionLength: 0.7
+  sphereCastRadius: 0.25
+  maxWallLookAngle: 30
+  minWallNormalAngleChange: 5
+  exitingWall: 0
+  exitWallTime: 0.2
 --- !u!1 &7148519968488241023
 GameObject:
   m_ObjectHideFlags: 0
