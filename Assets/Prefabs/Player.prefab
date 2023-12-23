@@ -169,13 +169,20 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   wallRunForce: 200
+  wallJumpUpForce: 7
+  wallJumpSideForce: 12
   wallClimbSpeed: 3
-  maxWallRunTime: 1.5
+  maxWallRunTime: 0.7
   upwardsRunKey: 304
   downwardsRunKey: 306
+  jumpKey: 32
   wallCheckDistance: 0.7
   minJumpHeight: 2
+  exitWallTime: 0.2
+  useGravity: 0
+  gravityCounterForce: 0
   orientation: {fileID: 3379936926764207333}
+  playerCam: {fileID: 0}
 --- !u!1 &7148519968488241023
 GameObject:
   m_ObjectHideFlags: 0

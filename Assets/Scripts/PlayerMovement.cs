@@ -262,7 +262,11 @@ public class PlayerMovement : MonoBehaviour
         }
         
         //turn gravity off while on slope
-        myRigidBody.useGravity = !OnSlope();
+        if (!wallrunning)
+        {
+            myRigidBody.useGravity = !OnSlope();
+        }
+        
     }
 
     private void SpeedControl()

@@ -108,6 +108,7 @@ MonoBehaviour:
   sensitivityX: 1000
   sensitivityY: 1000
   orientation: {fileID: 0}
+  camHolder: {fileID: 8171345591223191609}
 --- !u!1 &7810685659676138446
 GameObject:
   m_ObjectHideFlags: 0

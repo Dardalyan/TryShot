@@ -67,6 +67,7 @@
      <Folder Include="Assets/Desert Buildings" />
      <None Include="Assets/Desert Buildings/Read me.txt" />
      <Folder Include="Assets/Desert Buildings/Prefabs" />
+     <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Desert City Pack/Models" />
      <Folder Include="Assets/Desert Buildings/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show_Assets" />
@@ -325,6 +326,9 @@
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -778,6 +782,10 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{8269e116-a256-bed1-d4cd-c82e07ac0e48}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
