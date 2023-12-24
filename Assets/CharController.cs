@@ -8,6 +8,7 @@ public class CharController : MonoBehaviour
     
     private CharacterController controller;
     private float Speed = 25f;
+    private Vector3 moveVector;
     
     void Start()
     {
@@ -16,11 +17,13 @@ public class CharController : MonoBehaviour
 
     void Update()
     {
-        
-        
-        
-        Vector3 move = new Vector3(Input.GetAxis("Horizontal"), 0,Input.GetAxis("Vertical"));
-        controller.Move(move * (Time.deltaTime * Speed));
+        moveCharacter();
+    }
 
+    private void moveCharacter()
+    {
+        Vector3 move = new Vector3(Input.GetAxis("Horizontal")*-1, 0,Input.GetAxis("Vertical")*-1);
+        move = transform.TransformDirection(move);
+        controller.Move(move * (Time.deltaTime * Speed));    
     }
 }

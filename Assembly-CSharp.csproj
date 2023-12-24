@@ -45,8 +45,11 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets/FindPlayer.cs" />
+     <Compile Include="Assets/TrackPlayer.cs" />
      <Compile Include="Assets/enemyController.cs" />
      <Compile Include="Assets/CharController.cs" />
+     <Compile Include="Assets/RotateCharacter.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Desert Buildings/Textures" />
      <Folder Include="Assets/Scenes" />
@@ -56,12 +59,19 @@
      <Folder Include="Assets/Desert Buildings/Models/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show" />
      <Folder Include="Assets/Desert Buildings/Models" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models" />
      <Folder Include="Assets/Desert_Fortification/Materials" />
      <Folder Include="Assets/Desert_Fortification/Prefabs" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials/Materials" />
+     <Folder Include="Assets/Model/Zombie 1/Materials" />
      <Folder Include="Assets/Desert City Pack/Textures" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials" />
      <Folder Include="Assets/Desert City Pack/Models/Materials" />
+     <Folder Include="Assets/Model/Zombie 1/Model" />
      <Folder Include="Assets/Desert Buildings" />
+     <Folder Include="Assets/LowPolySoldiers_demo" />
      <None Include="Assets/Desert Buildings/Read me.txt" />
+     <Folder Include="Assets/Model" />
      <Folder Include="Assets/Desert Buildings/Prefabs" />
      <Folder Include="Assets/Desert City Pack/Models" />
      <Folder Include="Assets/Desert Buildings/Materials" />
@@ -69,7 +79,11 @@
      <Folder Include="Assets/Desert_Fortification/Models" />
      <Folder Include="Assets/Desert_Fortification/Terxtures" />
      <Folder Include="Assets/Desert City Pack" />
+     <Folder Include="Assets/Model/Zombie 1" />
+     <Folder Include="Assets/Model/Zombie 1/Prefab" />
      <Folder Include="Assets/Materials" />
+     <Folder Include="Assets/Model/Zombie 1/Texture" />
+     <Folder Include="Assets/LowPolySoldiers_demo/animation" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>

@@ -356,6 +356,9 @@
 -analyzer:"/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 "Assets/CharController.cs"
 "Assets/enemyController.cs"
+"Assets/FindPlayer.cs"
+"Assets/RotateCharacter.cs"
+"Assets/TrackPlayer.cs"
 -langversion:9.0
 
 /deterministic
