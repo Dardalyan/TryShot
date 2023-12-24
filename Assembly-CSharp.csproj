@@ -45,16 +45,24 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets/FindPlayer.cs" />
-     <Compile Include="Assets/TrackPlayer.cs" />
-     <Compile Include="Assets/enemyController.cs" />
+     <Compile Include="Assets/Scripts/PlayerCam.cs" />
+     <Compile Include="Assets/Scripts/WallRunning.cs" />
+     <Compile Include="Assets/EnemyScripts/TrackPlayer.cs" />
+     <Compile Include="Assets/Scripts/Climbing.cs" />
+     <Compile Include="Assets/EnemyScripts/enemyController.cs" />
      <Compile Include="Assets/CharController.cs" />
+     <Compile Include="Assets/Scripts/MoveCamera.cs" />
+     <Compile Include="Assets/Scripts/Sliding.cs" />
+     <Compile Include="Assets/EnemyScripts/EnemyAnimationContorller.cs" />
+     <Compile Include="Assets/EnemyScripts/FindPlayer.cs" />
+     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
      <Compile Include="Assets/RotateCharacter.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Desert Buildings/Textures" />
      <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/EnemyScripts" />
+     <Folder Include="Assets/AnimationControllers" />
      <None Include="Assets/Desert_Fortification/read_me.txt" />
-     <Folder Include="Assets/Scenes/SampleScene" />
      <Folder Include="Assets/Desert_Fortification" />
      <Folder Include="Assets/Desert Buildings/Models/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show" />
@@ -84,6 +92,7 @@
      <Folder Include="Assets/Materials" />
      <Folder Include="Assets/Model/Zombie 1/Texture" />
      <Folder Include="Assets/LowPolySoldiers_demo/animation" />
+     <Folder Include="Assets/Scripts" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
