@@ -1347,6 +1347,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 38.282, y: -0.176, z: -0.232}
+--- !u!4 &570085569 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1362834816348375819, guid: b4bdb9082d6764399a2b089827088509, type: 3}
+  m_PrefabInstance: {fileID: 7485679111310614327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!43 &763540219
 Mesh:
   m_ObjectHideFlags: 0
@@ -2658,6 +2663,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!120 &1149493027 stripped
+LineRenderer:
+  m_CorrespondingSourceObject: {fileID: 7191096415806752957, guid: b4bdb9082d6764399a2b089827088509, type: 3}
+  m_PrefabInstance: {fileID: 7485679111310614327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1203630149
 GameObject:
   m_ObjectHideFlags: 0
@@ -7227,6 +7237,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 890958859252560735, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 7485679111310614329}
     - target: {fileID: 989399736276955285, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
       propertyPath: playerCam
       value: 
@@ -7275,6 +7289,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6700031758168149648, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: cam
+      value: 
+      objectReference: {fileID: 7485679111310614330}
+    - target: {fileID: 6700031758168149648, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: gunTip
+      value: 
+      objectReference: {fileID: 570085569}
+    - target: {fileID: 6700031758168149648, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: lineRenderer
+      value: 
+      objectReference: {fileID: 1149493027}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -7356,6 +7382,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: efe1ec0a80aaf49b0bf1dc1c23363a7f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &7485679111310614330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5833356149533944118, guid: b4bdb9082d6764399a2b089827088509, type: 3}
+  m_PrefabInstance: {fileID: 7485679111310614327}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

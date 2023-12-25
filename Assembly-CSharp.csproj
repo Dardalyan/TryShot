@@ -47,26 +47,42 @@
   <ItemGroup>
      <Compile Include="Assets/Scripts/PlayerCam.cs" />
      <Compile Include="Assets/Scripts/WallRunning.cs" />
+     <Compile Include="Assets/EnemyScripts/TrackPlayer.cs" />
      <Compile Include="Assets/Scripts/Climbing.cs" />
+     <Compile Include="Assets/EnemyScripts/enemyController.cs" />
+     <Compile Include="Assets/CharController.cs" />
      <Compile Include="Assets/Scripts/MoveCamera.cs" />
      <Compile Include="Assets/Scripts/Sliding.cs" />
+     <Compile Include="Assets/EnemyScripts/EnemyAnimationContorller.cs" />
+     <Compile Include="Assets/EnemyScripts/FindPlayer.cs" />
      <Compile Include="Assets/Scripts/PlayerMovement.cs" />
+     <Compile Include="Assets/Scripts/Grappling.cs" />
+     <Compile Include="Assets/RotateCharacter.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets/Desert Buildings/Textures" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/Scenes" />
+     <Folder Include="Assets/EnemyScripts" />
+     <Folder Include="Assets/AnimationControllers" />
      <None Include="Assets/Desert_Fortification/read_me.txt" />
      <Folder Include="Assets/Desert_Fortification" />
      <Folder Include="Assets/Desert Buildings/Models/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show" />
      <Folder Include="Assets/Desert Buildings/Models" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models" />
      <Folder Include="Assets/Desert_Fortification/Materials" />
      <Folder Include="Assets/Desert_Fortification/Prefabs" />
      <Folder Include="Assets/Materials" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials/Materials" />
+     <Folder Include="Assets/Model/Zombie 1/Materials" />
      <Folder Include="Assets/Desert City Pack/Textures" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials" />
      <Folder Include="Assets/Desert City Pack/Models/Materials" />
+     <Folder Include="Assets/Model/Zombie 1/Model" />
      <Folder Include="Assets/Desert Buildings" />
+     <Folder Include="Assets/LowPolySoldiers_demo" />
      <None Include="Assets/Desert Buildings/Read me.txt" />
+     <Folder Include="Assets/Model" />
      <Folder Include="Assets/Desert Buildings/Prefabs" />
      <Folder Include="Assets/Resources" />
      <Folder Include="Assets/Desert City Pack/Models" />
@@ -75,6 +91,10 @@
      <Folder Include="Assets/Desert_Fortification/Models" />
      <Folder Include="Assets/Desert_Fortification/Terxtures" />
      <Folder Include="Assets/Desert City Pack" />
+     <Folder Include="Assets/Model/Zombie 1" />
+     <Folder Include="Assets/Model/Zombie 1/Prefab" />
+     <Folder Include="Assets/Model/Zombie 1/Texture" />
+     <Folder Include="Assets/LowPolySoldiers_demo/animation" />
      <Folder Include="Assets/Scripts" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
@@ -703,6 +723,9 @@
      <Reference Include="Unity.EditorCoroutines.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
@@ -730,11 +753,11 @@
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.ProBuilder.AddOns.Editor">
-     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.Rider.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProBuilder.AddOns.Editor">
+     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
@@ -763,6 +786,9 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Updater">
+     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
@@ -772,11 +798,17 @@
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/Users/ardasenyuz/Desktop/TryShotGit/TryShot/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>

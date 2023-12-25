@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -49,6 +50,10 @@ public class PlayerMovement : MonoBehaviour
     private RaycastHit slopeRaycastHit;
     private bool exitingSlope;
 
+    [Header("Camera Effects")] 
+    [SerializeField] private PlayerCam cam;
+    [SerializeField] private float grappleFov = 95f;
+    
     [Header("References")] 
     [SerializeField] private Climbing climbingScript;
     
@@ -62,7 +67,7 @@ public class PlayerMovement : MonoBehaviour
 
     private Rigidbody myRigidBody;
 
-    [SerializeField] private MovementState movementState;
+    public MovementState movementState;
 
     public enum MovementState
     {
@@ -72,12 +77,15 @@ public class PlayerMovement : MonoBehaviour
         sliding,
         air,
         wallrunning,
-        climbing
+        climbing,
+        freeze
     }
 
     public bool isSliding;
     public bool wallrunning;
     public bool isClimbing;
+    public bool isFrozen;
+    public bool grappleIsActive;
     
     void Start()
     {
@@ -95,7 +103,7 @@ public class PlayerMovement : MonoBehaviour
         grounded = Physics.Raycast(transform.position, Vector3.down, playerHeight * 0.5f + 0.2f, ground);
         
         //handle drag
-        if (grounded)
+        if (grounded && !grappleIsActive)
         {
             myRigidBody.drag = groundDrag;
         }
@@ -146,8 +154,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void StateHandler()
     {
+        //freeze
+        if (isFrozen)
+        {
+            movementState = MovementState.freeze;
+            desiredMoveSpeed = 0;
+            myRigidBody.velocity = Vector3.zero;
+        }
         //climbing
-        if (isClimbing)
+        else if (isClimbing)
         {
             movementState = MovementState.climbing;
             desiredMoveSpeed = climbSpeed;
@@ -247,6 +262,11 @@ public class PlayerMovement : MonoBehaviour
     
     private void MovePlayer()
     {
+        if (grappleIsActive)
+        {
+            return;
+        }
+        
         if (climbingScript.exitingWall)
         {
             return;
@@ -289,6 +309,11 @@ public class PlayerMovement : MonoBehaviour
 
     private void SpeedControl()
     {
+        if (grappleIsActive)
+        {
+            return;
+        }
+        
         //limiting speed on slope
         if (OnSlope() && !exitingSlope)
         {
@@ -344,5 +369,54 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 GetSlopeMoveDirection(Vector3 direction)
     {
         return Vector3.ProjectOnPlane(direction, slopeRaycastHit.normal).normalized;
+    }
+    
+    //calculating how much force is needed to push the player exactly to the hit point of the hook
+    //(from the youtube video Kinematic Equations ball problem - Sebastian Lague)
+    public Vector3 CalculateJumpVelocity(Vector3 startPoint, Vector3 endPoint, float trajectoryHeight)
+    {
+        float gravity = Physics.gravity.y;
+        float displacementY = endPoint.y - startPoint.y;
+        Vector3 displacementXZ = new Vector3(endPoint.x - startPoint.x, 0f, endPoint.z - startPoint.z);
+
+        Vector3 velocityY = Vector3.up * Mathf.Sqrt(-2 * gravity * trajectoryHeight);
+        Vector3 velocityXZ = displacementXZ / (Mathf.Sqrt(-2 * trajectoryHeight / gravity) +
+                             Mathf.Sqrt(2 * (displacementY - trajectoryHeight) / gravity));
+        return velocityXZ + velocityY;
+    }
+    
+    public void JumpToPosition(Vector3 targetPosition, float trajectoryHeight)
+    {
+        grappleIsActive = true;
+        
+        velocityToSet = CalculateJumpVelocity(transform.position, targetPosition, trajectoryHeight);
+        Invoke(nameof(SetVelocity), 0.1f);
+    }
+
+    private bool enableMovementOnNextTouch;
+    private Vector3 velocityToSet;
+
+    private void SetVelocity()
+    {
+        enableMovementOnNextTouch = true;
+        myRigidBody.velocity = velocityToSet;
+        
+        cam.DoFov(grappleFov);
+    }
+
+    public void ResetRestrictions()
+    {
+        grappleIsActive = false;
+        cam.DoFov(85f);
+    }
+    private void OnCollisionEnter(Collision other)
+    {
+        if (enableMovementOnNextTouch)
+        {
+            enableMovementOnNextTouch = false;
+            ResetRestrictions();
+            
+            GetComponent<Grappling>().StopGrapple();
+        }
     }
 }
