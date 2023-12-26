@@ -61,6 +61,9 @@ public class Grappling : MonoBehaviour
         {
             return;
         }
+        
+        //deactivate active swinging
+        GetComponent<Swinging>().StopSwing();
 
         isGrappling = true;
 

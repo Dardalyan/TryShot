@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] private float slideSpeed;
     [SerializeField] private float wallRunSpeed;
     [SerializeField] private float climbSpeed;
+    [SerializeField] private float swingSpeed;
     
     private float desiredMoveSpeed;
     private float lastDesiredMoveSpeed;
@@ -78,7 +79,9 @@ public class PlayerMovement : MonoBehaviour
         air,
         wallrunning,
         climbing,
-        freeze
+        freeze,
+        grappling,
+        swinging
     }
 
     public bool isSliding;
@@ -86,6 +89,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isClimbing;
     public bool isFrozen;
     public bool grappleIsActive;
+    public bool isSwinging;
     
     void Start()
     {
@@ -160,6 +164,17 @@ public class PlayerMovement : MonoBehaviour
             movementState = MovementState.freeze;
             desiredMoveSpeed = 0;
             myRigidBody.velocity = Vector3.zero;
+        }
+        else if (grappleIsActive)
+        {
+            movementState = MovementState.grappling;
+            desiredMoveSpeed = sprintSpeed;
+        }
+        
+        else if (isSwinging)
+        {
+            movementState = MovementState.swinging;
+            desiredMoveSpeed = swingSpeed;
         }
         //climbing
         else if (isClimbing)
@@ -262,6 +277,12 @@ public class PlayerMovement : MonoBehaviour
     
     private void MovePlayer()
     {
+        //we have another method for movement while swinging
+        if (isSwinging)
+        {
+            return;
+        }
+        
         if (grappleIsActive)
         {
             return;
