@@ -6,6 +6,7 @@ public class Weapon : MonoBehaviour
 {
     [SerializeField] private Transform cam;
     [SerializeField] private float range = 100f;
+    //damage variable
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.Mouse0))
@@ -17,7 +18,17 @@ public class Weapon : MonoBehaviour
     private void Shoot()
     {
         RaycastHit hit;
-        Physics.Raycast(cam.position, cam.forward, out hit, range);
-        Debug.Log("Hit: " + hit.transform.name);
+        if(Physics.Raycast(cam.position, cam.forward, out hit, range))
+        {
+            Debug.Log("Hit: " + hit.transform.name);
+            //add shooting effect
+            //set a target (getcomponent enemy health)
+            //if (target == null){return;}
+            //call enemy healt decrease method
+        }
+        else
+        {
+            return;
+        }
     }
 }

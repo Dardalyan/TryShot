@@ -53,6 +53,7 @@
      <Compile Include="Assets/EnemyScripts/enemyController.cs" />
      <Compile Include="Assets/Scripts/Weapon.cs" />
      <Compile Include="Assets/CharController.cs" />
+     <Compile Include="Assets/Scripts/PlayerHealth.cs" />
      <Compile Include="Assets/Scripts/MoveCamera.cs" />
      <Compile Include="Assets/Scripts/Sliding.cs" />
      <Compile Include="Assets/EnemyScripts/EnemyAnimationContorller.cs" />
