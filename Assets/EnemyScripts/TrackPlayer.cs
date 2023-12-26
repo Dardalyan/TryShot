@@ -1,15 +1,21 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class TrackPlayer : MonoBehaviour
 {
-    public Transform target;
+    private Transform target;
 
-    [SerializeField] private int speed = 5;
-    
+    [SerializeField] private int speed = 15;
 
-    
+
+    private void Start()
+    {
+        target = GameObject.Find("user").transform;
+    }
+
+
     // Update is called once per frame
     void Update()
     {

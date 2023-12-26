@@ -6,26 +6,25 @@ using UnityEngine.AI;
 public class FindPlayer : MonoBehaviour
 {
 
-    public NavMeshAgent Enemy;
-    public Transform Player;
+    private NavMeshAgent _agent;
+    private Transform Player;
     // Start is called before the first frame update
-    void Start(){
-    
+    void Start()
+    {
 
+        _agent = GetComponent<NavMeshAgent>();
+        Player = GameObject.Find("user").transform;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        Enemy.SetDestination(Player.position);
-        if (Enemy.GetComponent<enemyController>().isOnTarget())
+        _agent.SetDestination(Player.position);
+        if (_agent.GetComponent<enemyController>().isOnTarget())
         {
-            Enemy.stoppingDistance = 100f;
+            _agent.stoppingDistance = 100f;
         }
-        else
-        {
-            Enemy.stoppingDistance = 20f;
-        }
+
     }
 }

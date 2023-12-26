@@ -17,6 +17,7 @@ public class enemyController : MonoBehaviour
     void Update()
     {
         var iot = isOnTarget();
+        Debug.Log(iot);
         
        
     }

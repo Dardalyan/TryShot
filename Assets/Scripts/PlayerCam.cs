@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
+//using DG.Tweening;
 
 public class PlayerCam : MonoBehaviour
 {
@@ -40,11 +40,11 @@ public class PlayerCam : MonoBehaviour
     public void DoFov(float endValue)
     {
         //using dotween package
-        GetComponent<Camera>().DOFieldOfView(endValue, 0.25f);
+       // GetComponent<Camera>().DOFieldOfView(endValue, 0.25f);
     }
 
     public void DoTilt(float zTilt)
     {
-        transform.DOLocalRotate(new Vector3(0, 0, zTilt), 0.25f);
+       // transform.DOLocalRotate(new Vector3(0, 0, zTilt), 0.25f);
     }
 }
