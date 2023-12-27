@@ -46,11 +46,15 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets/Scripts/Swinging.cs" />
+     <Compile Include="Assets/Merge File/EnemyScripts/EnemyAnimationContorller.cs" />
+     <Compile Include="Assets/Merge File/EnemyScripts/TrackPlayer.cs" />
      <Compile Include="Assets/Scripts/PlayerCam.cs" />
      <Compile Include="Assets/Scripts/WallRunning.cs" />
+     <Compile Include="Assets/Merge File/EnemyScripts/FindPlayer.cs" />
      <Compile Include="Assets/EnemyScripts/TrackPlayer.cs" />
      <Compile Include="Assets/Scripts/Climbing.cs" />
      <Compile Include="Assets/EnemyScripts/enemyController.cs" />
+     <Compile Include="Assets/Merge File/EnemyScripts/enemyController.cs" />
      <Compile Include="Assets/Scripts/Weapon.cs" />
      <Compile Include="Assets/CharController.cs" />
      <Compile Include="Assets/Scripts/PlayerHealth.cs" />
@@ -62,18 +66,26 @@
      <Compile Include="Assets/Scripts/Grappling.cs" />
      <Compile Include="Assets/RotateCharacter.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets/Merge File/LowPolySoldiers_demo" />
      <Folder Include="Assets/Desert Buildings/Textures" />
      <Folder Include="Assets/Prefabs" />
+     <Folder Include="Assets/Merge File/Model/Zombie 1" />
+     <Folder Include="Assets/Merge File/Model/Zombie 1/Prefab" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/EnemyScripts" />
+     <Folder Include="Assets/Merge File/LowPolySoldiers_demo/models/Materials" />
+     <Folder Include="Assets/Merge File/LowPolySoldiers_demo/models/Materials/Materials" />
      <Folder Include="Assets/AnimationControllers" />
      <None Include="Assets/Desert_Fortification/read_me.txt" />
      <Folder Include="Assets/Desert_Fortification" />
      <Folder Include="Assets/Low Poly Weapons VOL.1/Models" />
      <Folder Include="Assets/Desert Buildings/Models/Materials" />
+     <Folder Include="Assets/Merge File/Model" />
      <Folder Include="Assets/Desert_Fortification/Show" />
+     <Folder Include="Assets/Merge File/Model/Zombie 1/Texture" />
      <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/Art" />
      <Folder Include="Assets/Sprites/OccaSoftware" />
+     <Folder Include="Assets/Merge File/EnemyScripts" />
      <Folder Include="Assets/Desert Buildings/Models" />
      <Folder Include="Assets/LowPolySoldiers_demo/models" />
      <Folder Include="Assets/Desert_Fortification/Materials" />
@@ -83,6 +95,7 @@
      <Folder Include="Assets/Model/Zombie 1/Materials" />
      <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs" />
      <Folder Include="Assets/Desert City Pack/Textures" />
+     <Folder Include="Assets/Merge File/Model/Zombie 1/Model" />
      <Folder Include="Assets/LowPolySoldiers_demo/models/Materials" />
      <Folder Include="Assets/Desert City Pack/Models/Materials" />
      <Folder Include="Assets/Low Poly Weapons VOL.1" />
@@ -94,7 +107,9 @@
      <Folder Include="Assets/Model" />
      <Folder Include="Assets/Desert Buildings/Prefabs" />
      <Folder Include="Assets/Resources" />
+     <Folder Include="Assets/Merge File" />
      <Folder Include="Assets/Low Poly Weapons VOL.1/Prefabs" />
+     <Folder Include="Assets/Merge File/LowPolySoldiers_demo/models" />
      <Folder Include="Assets/Desert City Pack/Models" />
      <Folder Include="Assets/Sprites" />
      <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/DemoResources/Scenes" />
@@ -102,6 +117,7 @@
      <Folder Include="Assets/Desert Buildings/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show_Assets" />
      <Folder Include="Assets/Desert_Fortification/Models" />
+     <Folder Include="Assets/Merge File/Model/Zombie 1/Materials" />
      <Folder Include="Assets/Desert_Fortification/Terxtures" />
      <Folder Include="Assets/Desert City Pack" />
      <Folder Include="Assets/Model/Zombie 1" />
@@ -109,6 +125,7 @@
      <Folder Include="Assets/Model/Zombie 1/Texture" />
      <Folder Include="Assets/LowPolySoldiers_demo/animation" />
      <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/Merge File/LowPolySoldiers_demo/animation" />
      <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/Art/Textures" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
