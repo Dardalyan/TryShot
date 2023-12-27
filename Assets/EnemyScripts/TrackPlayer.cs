@@ -7,12 +7,12 @@ public class TrackPlayer : MonoBehaviour
 {
     private Transform target;
 
-    [SerializeField] private int speed = 15;
+    [SerializeField] private int speed = 10;
 
 
     private void Start()
     {
-        target = GameObject.Find("user").transform;
+        target = GameObject.Find("player").transform;
     }
 
 

@@ -8,23 +8,44 @@ public class FindPlayer : MonoBehaviour
 
     private NavMeshAgent _agent;
     private Transform Player;
-    // Start is called before the first frame update
+    private Animator animator;
+
     void Start()
     {
 
         _agent = GetComponent<NavMeshAgent>();
-        Player = GameObject.Find("user").transform;
-
+        Player = GameObject.Find("player").transform;
+        animator = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        _agent.SetDestination(Player.position);
-        if (_agent.GetComponent<enemyController>().isOnTarget())
-        {
-            _agent.stoppingDistance = 100f;
-        }
+        
+        float distance = Vector3.Distance (transform.position, Player.position);
+        
 
+        if (GetComponent<enemyController>().isOnTarget())
+        {
+            _agent.destination = _agent.transform.position;
+            _agent.isStopped = true;
+            animator.SetBool("isOnTarget", true);
+        }
+        else
+        {
+            if (distance < 75f)
+            {
+                _agent.destination = _agent.transform.position;
+                _agent.isStopped = true;
+                animator.SetBool("isOnTarget", true);
+            }
+            else
+            {
+                _agent.destination = Player.position;
+                animator.SetBool("isOnTarget", false);
+            }
+
+        }
+        
     }
 }

@@ -45,54 +45,77 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets/Scripts/PlayerCam.cs" />
-     <Compile Include="Assets/Scripts/WallRunning.cs" />
+     <Compile Include="Assets/PlayerScripts/PlayerMovement.cs" />
+     <Compile Include="Assets/PlayerScripts/Swinging.cs" />
+     <Compile Include="Assets/PlayerScripts/PlayerCam.cs" />
      <Compile Include="Assets/EnemyScripts/TrackPlayer.cs" />
-     <Compile Include="Assets/Scripts/Climbing.cs" />
+     <Compile Include="Assets/PlayerScripts/PlayerHealth.cs" />
      <Compile Include="Assets/EnemyScripts/enemyController.cs" />
+     <Compile Include="Assets/EnemyScripts/ZombieController.cs" />
+     <Compile Include="Assets/PlayerScripts/WallRunning.cs" />
      <Compile Include="Assets/CharController.cs" />
-     <Compile Include="Assets/Scripts/MoveCamera.cs" />
-     <Compile Include="Assets/Scripts/Sliding.cs" />
-     <Compile Include="Assets/EnemyScripts/EnemyAnimationContorller.cs" />
+     <Compile Include="Assets/PlayerScripts/MoveCamera.cs" />
+     <Compile Include="Assets/PlayerScripts/Grappling.cs" />
+     <Compile Include="Assets/PlayerScripts/Weapon.cs" />
+     <Compile Include="Assets/PlayerScripts/Climbing.cs" />
      <Compile Include="Assets/EnemyScripts/FindPlayer.cs" />
-     <Compile Include="Assets/Scripts/PlayerMovement.cs" />
      <Compile Include="Assets/RotateCharacter.cs" />
+     <Compile Include="Assets/PlayerScripts/Sliding.cs" />
      <Folder Include="Assets" />
+     <Folder Include="Assets/LowPolySoldiers_demo" />
      <Folder Include="Assets/Desert Buildings/Textures" />
+     <Folder Include="Assets/Prefabs" />
+     <Folder Include="Assets/Model/Zombie 1" />
+     <Folder Include="Assets/Model/Zombie 1/Prefab" />
      <Folder Include="Assets/Scenes" />
      <Folder Include="Assets/EnemyScripts" />
-     <Folder Include="Assets/AnimationControllers" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials/Materials" />
      <None Include="Assets/Desert_Fortification/read_me.txt" />
      <Folder Include="Assets/Desert_Fortification" />
+     <Folder Include="Assets/Low Poly Weapons VOL.1/Models" />
+     <Folder Include="Assets/AnimationControllers" />
      <Folder Include="Assets/Desert Buildings/Models/Materials" />
+     <Folder Include="Assets/Model" />
      <Folder Include="Assets/Desert_Fortification/Show" />
+     <Folder Include="Assets/Model/Zombie 1/Texture" />
+     <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/Art" />
+     <Folder Include="Assets/Sprites/OccaSoftware" />
      <Folder Include="Assets/Desert Buildings/Models" />
-     <Folder Include="Assets/LowPolySoldiers_demo/models" />
+     <Folder Include="Assets/LowPolySoldiers_demo 1/models" />
      <Folder Include="Assets/Desert_Fortification/Materials" />
      <Folder Include="Assets/Desert_Fortification/Prefabs" />
-     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials/Materials" />
-     <Folder Include="Assets/Model/Zombie 1/Materials" />
+     <Folder Include="Assets/Materials" />
+     <Folder Include="Assets/LowPolySoldiers_demo 1/models/Materials/Materials" />
+     <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs" />
      <Folder Include="Assets/Desert City Pack/Textures" />
-     <Folder Include="Assets/LowPolySoldiers_demo/models/Materials" />
-     <Folder Include="Assets/Desert City Pack/Models/Materials" />
      <Folder Include="Assets/Model/Zombie 1/Model" />
+     <Folder Include="Assets/LowPolySoldiers_demo 1/models/Materials" />
+     <Folder Include="Assets/Desert City Pack/Models/Materials" />
+     <Folder Include="Assets/Low Poly Weapons VOL.1" />
+     <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/DemoResources" />
      <Folder Include="Assets/Desert Buildings" />
-     <Folder Include="Assets/LowPolySoldiers_demo" />
      <None Include="Assets/Desert Buildings/Read me.txt" />
-     <Folder Include="Assets/Model" />
      <Folder Include="Assets/Desert Buildings/Prefabs" />
+     <Folder Include="Assets/Resources" />
+     <Folder Include="Assets/LowPolySoldiers_demo 1" />
+     <Folder Include="Assets/Low Poly Weapons VOL.1/Prefabs" />
+     <Folder Include="Assets/LowPolySoldiers_demo/models" />
+     <Folder Include="Assets/Scenes/SampleScene" />
      <Folder Include="Assets/Desert City Pack/Models" />
+     <Folder Include="Assets/Sprites" />
+     <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/DemoResources/Scenes" />
+     <None Include="Assets/Sprites/OccaSoftware/Crosshairs/Readme.txt" />
      <Folder Include="Assets/Desert Buildings/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show_Assets" />
      <Folder Include="Assets/Desert_Fortification/Models" />
+     <Folder Include="Assets/Model/Zombie 1/Materials" />
      <Folder Include="Assets/Desert_Fortification/Terxtures" />
      <Folder Include="Assets/Desert City Pack" />
-     <Folder Include="Assets/Model/Zombie 1" />
-     <Folder Include="Assets/Model/Zombie 1/Prefab" />
-     <Folder Include="Assets/Materials" />
-     <Folder Include="Assets/Model/Zombie 1/Texture" />
+     <Folder Include="Assets/LowPolySoldiers_demo 1/animation" />
+     <Folder Include="Assets/PlayerScripts" />
      <Folder Include="Assets/LowPolySoldiers_demo/animation" />
-     <Folder Include="Assets/Scripts" />
+     <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/Art/Textures" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
      </Reference>
@@ -344,6 +367,9 @@
      </Reference>
      <Reference Include="ReportGeneratorMerged">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/PackageCache/com.unity.testtools.codecoverage@1.2.4/lib/ReportGenerator/ReportGeneratorMerged.dll</HintPath>
+     </Reference>
+     <Reference Include="DOTween">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Assets/Plugins/Demigiant/DOTween/DOTween.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/PackageCache/com.unity.visualscripting@1.9.1/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
@@ -714,17 +740,59 @@
      <Reference Include="mscorlib">
      <HintPath>/Applications/Unity/Hub/Editor/2022.3.11f1/Unity.app/Contents/NetStandard/compat/2.1.0/shims/netfx/mscorlib.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.PlasticSCM.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProBuilder">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.ProBuilder.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Timeline.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Shared.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualStudio.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEditor.UI">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
+     </Reference>
+     <Reference Include="UnityEngine.UI">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Core.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProBuilder.AddOns.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.ProBuilder.AddOns.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEngine.UI">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.EditorCoroutines.Editor.dll</HintPath>
+     <Reference Include="Unity.ProBuilder.Editor">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.ProBuilder.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
@@ -738,47 +806,23 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.AI.Navigation.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.PlasticSCM.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.PlasticSCM.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.AI.Navigation.Updater">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.AI.Navigation.Updater.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Timeline.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Shared.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Shared.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualStudio.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualStudio.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.TextMeshPro">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Core.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="UnityEditor.UI">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Core.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Core.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.AI.Navigation.Editor">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ProBuilder.AssetIdRemapUtility">
+     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.ProBuilder.AssetIdRemapUtility.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.State.dll</HintPath>
@@ -789,14 +833,16 @@
      <Reference Include="Unity.VSCode.Editor">
      <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Flow.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow.Editor">
-     <HintPath>/Users/dardalyan/Documents/IEU-Sem1-2023:24/SE320/CORE/TryShot_Demo/Library/ScriptAssemblies/Unity.VisualScripting.Flow.Editor.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
+      <Project>{265b046d-62fb-f04d-7c8e-7e4c8d6abeba}</Project>
+      <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="OccaSoftware.Crosshairs.Editor.csproj">
+      <Project>{8bbbd8b6-720e-ed1c-36b7-4fbf733379ad}</Project>
+      <Name>OccaSoftware.Crosshairs.Editor</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
