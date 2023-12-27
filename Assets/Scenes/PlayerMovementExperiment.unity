@@ -10932,6 +10932,10 @@ PrefabInstance:
       propertyPath: gunTip
       value: 
       objectReference: {fileID: 570085569}
+    - target: {fileID: 3184989673704534217, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6032477117528324513, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
