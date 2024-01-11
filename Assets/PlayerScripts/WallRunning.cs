@@ -96,17 +96,18 @@ public class WallRunning : MonoBehaviour
             {
                 StartWallRun();
             }
-
-            if (wallRunTimer > 0)
+            
+            //if we don't want the player to wallrun endlessly
+            /*if (wallRunTimer > 0)
             {
                 wallRunTimer -= Time.deltaTime;
             }
 
             if (wallRunTimer <= 0 && playerMovement.wallrunning)
             {
-                isExitingWall = true;
+                //isExitingWall = true;
                 exitWallTimer = exitWallTime;
-            }
+            }*/
 
             if (Input.GetKeyDown(jumpKey))
             {
@@ -212,7 +213,7 @@ public class WallRunning : MonoBehaviour
         playerMovement.wallrunning = false;
         
         //reset camera effects
-        playerCam.DoFov(80f);
+        playerCam.DoFov(85f);
         playerCam.DoTilt(0f);
     }
 
@@ -231,4 +232,5 @@ public class WallRunning : MonoBehaviour
         myRigidbody.velocity = new Vector3(myRigidbody.velocity.x, 0f, myRigidbody.velocity.z);
         myRigidbody.AddForce(forceToApply, ForceMode.Impulse);
     }
+    
 }
