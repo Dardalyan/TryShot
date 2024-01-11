@@ -27,8 +27,14 @@ public class Grappling : MonoBehaviour
     [Header("Input")] 
     [SerializeField] private KeyCode grappleKey = KeyCode.Mouse1;
     
+    [Header("AimPrediction")] 
+    private RaycastHit predictionHit;
+    [SerializeField] private float predictionSphereCastRadius;
+    [SerializeField] private Transform predictionPoint;
+    
     private bool isGrappling;
-
+    
+    
     private void Start()
     {
         playerMovementScript = GetComponent<PlayerMovement>();
@@ -40,6 +46,8 @@ public class Grappling : MonoBehaviour
         {
             StartGrapple();
         }
+        
+        CheckForGrapplePoints();
 
         if (grapplingCoolDownTimer > 0)
         {
@@ -57,10 +65,12 @@ public class Grappling : MonoBehaviour
 
     private void StartGrapple()
     {
-        if (grapplingCoolDownTimer > 0)
+        if (grapplingCoolDownTimer > 0 || predictionHit.point == Vector3.zero)
         {
             return;
         }
+        
+        predictionPoint.gameObject.SetActive(false);
         
         //deactivate active swinging
         GetComponent<Swinging>().StopSwing();
@@ -68,22 +78,12 @@ public class Grappling : MonoBehaviour
         isGrappling = true;
 
         playerMovementScript.isFrozen = true;
-
-        RaycastHit raycastHit;
-        if (Physics.Raycast(cam.position, cam.forward, out raycastHit, maxGrappleDistance, grappleable))
-        {
-            grapplePoint = raycastHit.point;
+        
+        grapplePoint = predictionHit.point;
             
-            //nameof gets the methods name as a string
-            Invoke(nameof(ExecuteGrapple), grappleDelayTime);
-        }
-        else
-        {
-            grapplePoint = cam.position + cam.forward * maxGrappleDistance;
-            
-            Invoke(nameof(StopGrapple), grappleDelayTime);
-        }
-
+        //nameof gets the methods name as a string
+        Invoke(nameof(ExecuteGrapple), grappleDelayTime);
+        
         lineRenderer.enabled = true;
         lineRenderer.SetPosition(1, grapplePoint);
 
@@ -117,5 +117,53 @@ public class Grappling : MonoBehaviour
         grapplingCoolDownTimer = grapplingCoolDown;
 
         lineRenderer.enabled = false;
+    }
+    
+    private void CheckForGrapplePoints()
+    {
+        //if currentşy swinging, return
+        if (isGrappling || playerMovementScript.isSwinging)
+        {
+            return;
+        }
+
+        RaycastHit sphereCastHit;
+        Physics.SphereCast(cam.position, predictionSphereCastRadius, cam.forward, out sphereCastHit, maxGrappleDistance, grappleable);
+
+        RaycastHit raycastHit;
+        Physics.Raycast(cam.position, cam.forward, out raycastHit, maxGrappleDistance, grappleable);
+
+        Vector3 realHitPoint;
+        //option 1 - direct hit
+        if (raycastHit.point != Vector3.zero)
+        {
+            realHitPoint = raycastHit.point;
+        }
+        
+        //option 2 - predicted hit
+        else if (sphereCastHit.point != Vector3.zero)
+        {
+            realHitPoint = sphereCastHit.point;
+        }
+
+        //option 3 - miss
+        else
+        {
+            realHitPoint = Vector3.zero;
+        }
+        
+        //realhitpoint is not zero
+        if (realHitPoint != Vector3.zero)
+        {
+            predictionPoint.gameObject.SetActive(true);
+            predictionPoint.position = realHitPoint;
+        }
+        //realhitpoint is zero
+        else
+        {
+            predictionPoint.gameObject.SetActive(false);
+        }
+
+        predictionHit = raycastHit.point == Vector3.zero ? sphereCastHit : raycastHit;
     }
 }
