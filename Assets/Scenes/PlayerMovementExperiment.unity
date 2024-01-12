@@ -751,24 +751,6 @@ Mesh:
     offset: 0
     size: 0
     path: 
---- !u!1 &168115967 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1283639442094980559, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-  m_PrefabInstance: {fileID: 2850257294626051384}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &168115978
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 168115967}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7505482844e334da39273944d31abc29, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  gameOverCanvas: {fileID: 2119938313}
 --- !u!43 &225449677
 Mesh:
   m_ObjectHideFlags: 0
@@ -1695,11 +1677,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 685499587}
   m_LocalEulerAnglesHint: {x: 38.282, y: -0.176, z: -0.232}
---- !u!4 &425804332 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2496130602246777860, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-  m_PrefabInstance: {fileID: 2850257294626051384}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &570085569 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1362834816348375819, guid: b4bdb9082d6764399a2b089827088509, type: 3}
@@ -10948,18 +10925,6 @@ PrefabInstance:
       propertyPath: playerCam
       value: 
       objectReference: {fileID: 7485679111310614329}
-    - target: {fileID: 989399736276955285, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      propertyPath: maxWallRunTime
-      value: 0.7
-      objectReference: {fileID: 0}
-    - target: {fileID: 989399736276955285, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      propertyPath: gravityCounterForce
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 989399736276955285, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      propertyPath: minWallNormalAngleChange
-      value: 5
-      objectReference: {fileID: 0}
     - target: {fileID: 1283639442094980559, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
       propertyPath: m_Name
       value: Player
@@ -10972,9 +10937,13 @@ PrefabInstance:
       propertyPath: gunTip
       value: 
       objectReference: {fileID: 570085569}
-    - target: {fileID: 3184989673704534217, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      propertyPath: m_IsActive
-      value: 0
+    - target: {fileID: 5003251541478961512, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: playerCam
+      value: 
+      objectReference: {fileID: 7485679111310614329}
+    - target: {fileID: 5003251541478961512, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: zoomedInFOV
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 6032477117528324513, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11028,21 +10997,14 @@ PrefabInstance:
       propertyPath: lineRenderer
       value: 
       objectReference: {fileID: 1149493027}
-    - target: {fileID: 6700031758168149648, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      propertyPath: predictionPoint
+    - target: {fileID: 7738188147624831838, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: gameOverCanvas
       value: 
-      objectReference: {fileID: 425804332}
-    - target: {fileID: 6700031758168149648, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      propertyPath: predictionSphereCastRadius
-      value: 3
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2119938313}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1283639442094980559, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
-      insertIndex: 9
-      addedObject: {fileID: 168115978}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
 --- !u!1001 &5674608283356660339
 PrefabInstance:

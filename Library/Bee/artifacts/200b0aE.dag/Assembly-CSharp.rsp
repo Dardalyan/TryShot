@@ -378,6 +378,7 @@
 "Assets/PlayerScripts/Swinging.cs"
 "Assets/PlayerScripts/WallRunning.cs"
 "Assets/PlayerScripts/Weapon.cs"
+"Assets/PlayerScripts/WeaponZoom.cs"
 "Assets/RotateCharacter.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01.cs"
 "Assets/TextMesh Pro/Examples & Extras/Scripts/Benchmark01_UGUI.cs"

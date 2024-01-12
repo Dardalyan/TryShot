@@ -5,8 +5,8 @@ using DG.Tweening;
 
 public class PlayerCam : MonoBehaviour
 {
-    [SerializeField] private float sensitivityX;
-    [SerializeField] private float sensitivityY;
+    public float sensitivityX;
+    public float sensitivityY;
 
     [SerializeField] private Transform orientation;
     [SerializeField] private Transform camHolder;
