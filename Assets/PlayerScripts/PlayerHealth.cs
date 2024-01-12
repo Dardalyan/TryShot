@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,8 +12,7 @@ public class PlayerHealth : MonoBehaviour
         hitPoints -= damage;
         if (hitPoints <= 0)
         {
-            //game over screen
-            Debug.Log("Player died");
+            GetComponent<DeathHandler>().HandleDeath();
         }
     }
 }

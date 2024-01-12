@@ -751,6 +751,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &168115967 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1283639442094980559, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+  m_PrefabInstance: {fileID: 2850257294626051384}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &168115978
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 168115967}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7505482844e334da39273944d31abc29, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gameOverCanvas: {fileID: 2119938313}
 --- !u!43 &225449677
 Mesh:
   m_ObjectHideFlags: 0
@@ -9012,6 +9030,11 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!223 &2119938313 stripped
+Canvas:
+  m_CorrespondingSourceObject: {fileID: 4701048641229084383, guid: 300d74e4b68be44dbb279460a3e03a09, type: 3}
+  m_PrefabInstance: {fileID: 5674608283356660339}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &2138644235
 GameObject:
   m_ObjectHideFlags: 0
@@ -11016,7 +11039,10 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1283639442094980559, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      insertIndex: 9
+      addedObject: {fileID: 168115978}
   m_SourcePrefab: {fileID: 100100000, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
 --- !u!1001 &5674608283356660339
 PrefabInstance:
