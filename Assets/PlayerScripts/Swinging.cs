@@ -17,7 +17,7 @@ public class Swinging : MonoBehaviour
     [SerializeField] private PlayerMovement playerMovementScript;
 
     [Header("Swinging")] 
-    private float maxSwingDistance = 25f;
+    [SerializeField] private float maxSwingDistance = 25f;
     private Vector3 swingPoint;
     private SpringJoint joint;
 

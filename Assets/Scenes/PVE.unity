@@ -140,6 +140,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -221,6 +225,10 @@ PrefabInstance:
     - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V5 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 426358, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -313,6 +321,10 @@ PrefabInstance:
     - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V1
+      objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -444,6 +456,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V3 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
       value: 872.7008
@@ -552,6 +568,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -628,6 +648,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_Name
       value: Desert_house_free (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
@@ -742,6 +766,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1332568684048876487, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: range
+      value: 125
+      objectReference: {fileID: 0}
     - target: {fileID: 1844689072991580436, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_Mass
       value: 2.5
@@ -751,16 +779,72 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: jumpForce
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: walkSpeed
+      value: 35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: climbSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: groundDrag
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: slideSpeed
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: swingSpeed
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: crouchSpeed
+      value: 17.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: sprintSpeed
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: crouchYScale
-      value: 3.5
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: playerHeight
-      value: 14
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: wallRunSpeed
+      value: 42.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2183941501827639141, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: ground.m_Bits
+      value: 192
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281271897862710447, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: minJumpHeight
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281271897862710447, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: wallClimbSpeed
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281271897862710447, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: wallJumpUpForce
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281271897862710447, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: wallCheckDistance
+      value: 5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 2281271897862710447, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: wallJumpSideForce
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 2754306076318541673, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_LocalScale.x
@@ -782,17 +866,41 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3849627252963769305, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: slideYScale
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864196449866430530, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: forwardAirForce
+      value: 15000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864196449866430530, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: maxSwingDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864196449866430530, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: horizontalAirForce
+      value: 10000
+      objectReference: {fileID: 0}
+    - target: {fileID: 3864196449866430530, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: predictionSphereCastRadius
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630555841161773011, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: range
+      value: 200
+      objectReference: {fileID: 0}
     - target: {fileID: 4729923784275242395, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_LocalScale.x
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4729923784275242395, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4729923784275242395, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_LocalScale.z
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4729923784275242395, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -806,9 +914,37 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4982752534447053067, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: range
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686060645609757354, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: maxGrappleDistance
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5686060645609757354, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: predictionSphereCastRadius
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6980024723342444903, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
       propertyPath: m_Name
       value: User
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503603258879045988, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: climbSpeed
+      value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503603258879045988, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: detectionLength
+      value: 5.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503603258879045988, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: climbJumpUpForce
+      value: 70
+      objectReference: {fileID: 0}
+    - target: {fileID: 8503603258879045988, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
+      propertyPath: climbJumpBackForce
+      value: 60
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -831,6 +967,10 @@ PrefabInstance:
     - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V1 (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -1063,6 +1203,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_house_free (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
       value: 16.435831
@@ -1166,6 +1310,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V3 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
       value: 872.7008
@@ -1247,6 +1395,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_Name
       value: Desert_house_free (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
@@ -1341,6 +1493,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -1423,6 +1579,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -1499,6 +1659,10 @@ PrefabInstance:
     - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V3 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
@@ -1592,6 +1756,10 @@ PrefabInstance:
     - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V2 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
@@ -1732,6 +1900,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -1866,6 +2038,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V3 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
       value: 872.7008
@@ -1942,6 +2118,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_Name
       value: Desert_house_free (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
@@ -2040,6 +2220,10 @@ PrefabInstance:
     - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V1 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -2279,6 +2463,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V4
       objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8771
@@ -2449,6 +2637,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -2587,6 +2779,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8771
@@ -2711,6 +2907,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_house_free
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
       value: 16.435831
@@ -2804,6 +3004,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -2880,6 +3084,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_Name
       value: Desert_house_free (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
@@ -3235,7 +3443,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1046456952}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: MAP
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3387,6 +3595,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -3463,6 +3675,10 @@ PrefabInstance:
     - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V3 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
@@ -3562,6 +3778,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -3654,6 +3874,10 @@ PrefabInstance:
     - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -3748,6 +3972,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8771
@@ -3824,6 +4052,10 @@ PrefabInstance:
     - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V4 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -4001,6 +4233,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -4082,72 +4318,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.011000001, z: 0.028}
   m_TimeToStationary: 0.5
---- !u!1001 &1152497098
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 1104387605056969033, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_TargetDisplay
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1861665268869472108, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_Name
-      value: player
-      objectReference: {fileID: 0}
-    - target: {fileID: 1861665268869472108, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 430
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 8.8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 847
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.30170098
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.95340264
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -144.88
-      objectReference: {fileID: 0}
-    - target: {fileID: 3264052433127179654, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 5628145115030618336, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 2655bf9fd9cee483f8e6201850fe4039, type: 3}
 --- !u!4 &1160099131 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 834008538390247260, guid: 06443828b7b8b4cff8f1b8e5c4fffc00, type: 3}
@@ -4403,6 +4573,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -4542,6 +4716,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V4 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8771
@@ -4635,6 +4813,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -4727,6 +4909,10 @@ PrefabInstance:
     - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V5
+      objectReference: {fileID: 0}
+    - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 426358, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -4910,9 +5096,125 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1046456952}
     m_Modifications:
+    - target: {fileID: 1004981943418092, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 1045189190928442, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
       propertyPath: m_Name
       value: Fortification_Model2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1045189190928442, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1072253768521992, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1158623338196670, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1193159950631600, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1220825359724332, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312249478581096, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1344676283430134, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1347777499519536, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1354481249925606, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1361830456518468, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1373977318857478, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1428257627511152, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1482126866334116, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1530361123476586, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1541417759309354, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1605235883290470, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1615297470365518, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1616969867782568, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1629822559438420, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1665646899906982, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1736403592686162, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1761357024087294, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1847882619220430, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1862014216215526, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1897821325082322, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1921925019340318, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946462402794466, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986584064964612, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 4585537967880336, guid: e6aede9f795a95743a14b8d627dab7dc, type: 3}
       propertyPath: m_LocalScale.x
@@ -5006,6 +5308,10 @@ PrefabInstance:
     - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V5 (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 426358, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -5199,6 +5505,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -5333,6 +5643,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -5409,6 +5723,10 @@ PrefabInstance:
     - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V4 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
@@ -5503,6 +5821,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V4 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 198726, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 468444, guid: e3deda9cbdf55484a80b96efb01909cd, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8771
@@ -5596,6 +5918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -5688,6 +6014,10 @@ PrefabInstance:
     - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V1 (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
@@ -5802,6 +6132,10 @@ PrefabInstance:
     - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V5 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 426358, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -5998,6 +6332,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_Name
       value: Desert_house_free (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
@@ -6252,6 +6590,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -6349,6 +6691,10 @@ PrefabInstance:
     - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V5 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 426358, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_LocalScale.x
@@ -6786,6 +7132,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -6962,6 +7312,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V5 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 184346, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 426358, guid: 3cc32b211ba11174199a64a41ce904c2, type: 3}
       propertyPath: m_LocalScale.x
       value: 752.3026
@@ -7054,6 +7408,10 @@ PrefabInstance:
     - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V3 (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
@@ -7205,6 +7563,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -7319,6 +7681,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V2 (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 106958, guid: 9923332096aa0a54587e28f246da49de, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 467390, guid: 9923332096aa0a54587e28f246da49de, type: 3}
       propertyPath: m_LocalScale.x
       value: 808.6555
@@ -7417,6 +7783,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -7509,6 +7879,10 @@ PrefabInstance:
     - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_Name
       value: Desert_Building_V3 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 106322, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 465504, guid: 14109c6f26a2be34c8ac4c0eb01f3aec, type: 3}
       propertyPath: m_LocalScale.x
@@ -7608,6 +7982,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Desert_Building_V1 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 101568, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
+      propertyPath: m_Layer
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 431408, guid: 36f3c19a7597eb94987d9f341e3010eb, type: 3}
       propertyPath: m_LocalScale.x
       value: 753.8594
@@ -7700,6 +8078,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_Name
       value: Desert_house_free (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
+      propertyPath: m_Layer
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 1fcfd74f04bdf464aa90886ce55bbba3, type: 3}
       propertyPath: m_LocalScale.x
@@ -7811,6 +8193,5 @@ SceneRoots:
   - {fileID: 705507995}
   - {fileID: 1045445135}
   - {fileID: 1046456952}
-  - {fileID: 1152497098}
   - {fileID: 157161393}
   - {fileID: 272932265}
