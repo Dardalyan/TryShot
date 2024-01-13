@@ -366,6 +366,7 @@
 "Assets/EnemyScripts/FindPlayer.cs"
 "Assets/EnemyScripts/TrackPlayer.cs"
 "Assets/EnemyScripts/ZombieController.cs"
+"Assets/PlayerScripts/Ammo.cs"
 "Assets/PlayerScripts/Climbing.cs"
 "Assets/PlayerScripts/DeathHandler.cs"
 "Assets/PlayerScripts/Grappling.cs"

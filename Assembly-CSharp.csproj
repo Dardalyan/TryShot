@@ -92,6 +92,7 @@
      <Compile Include="Assets/PlayerScripts/MoveCamera.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark03.cs" />
      <Compile Include="Assets/PlayerScripts/Grappling.cs" />
+     <Compile Include="Assets/PlayerScripts/Ammo.cs" />
      <Compile Include="Assets/PlayerScripts/Weapon.cs" />
      <Compile Include="Assets/PlayerScripts/Climbing.cs" />
      <Compile Include="Assets/EnemyScripts/FindPlayer.cs" />
