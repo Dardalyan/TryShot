@@ -81,6 +81,7 @@
      <Compile Include="Assets/EnemyScripts/enemyController.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexZoom.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark02.cs" />
+     <Compile Include="Assets/PlayerScripts/AmmoPickup.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_B.cs" />
      <Compile Include="Assets/PlayerScripts/WeaponZoom.cs" />
      <Compile Include="Assets/EnemyScripts/ZombieController.cs" />
