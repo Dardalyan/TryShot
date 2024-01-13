@@ -11086,6 +11086,10 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 336920137}
+    - target: {fileID: 4104508240731841597, guid: b4bdb9082d6764399a2b089827088509, type: 3}
+      propertyPath: currentWeapon
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4681946270041361193, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: cameraPosition
       value: 
