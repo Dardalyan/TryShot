@@ -207,6 +207,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4952727429218122}
   - component: {fileID: 5109892577886532679}
+  - component: {fileID: 4462032137031771832}
   m_Layer: 0
   m_Name: M1911
   m_TagString: Untagged
@@ -244,8 +245,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  range: 100
+  range: 40
   ammoSlot: {fileID: 0}
+  timeBetweenShots: 0.2
+  damage: 15
+--- !u!114 &4462032137031771832
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1694449805434718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf3a51cab27c4525acb60dd89012a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 0}
+  zoomedInFOV: 50
+  zoomedOutSensitivity: 1000
+  zoomedInSensitivity: 650
 --- !u!1 &1748277932983872
 GameObject:
   m_ObjectHideFlags: 0

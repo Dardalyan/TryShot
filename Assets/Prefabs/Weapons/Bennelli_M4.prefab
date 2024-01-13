@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 33898383997488124}
   - component: {fileID: 23904141403194016}
   - component: {fileID: 4739995083739904498}
+  - component: {fileID: 6365520530095755179}
   m_Layer: 0
   m_Name: Bennelli_M4
   m_TagString: Untagged
@@ -99,8 +100,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  range: 100
+  range: 25
   ammoSlot: {fileID: 0}
+  timeBetweenShots: 2
+  damage: 60
+--- !u!114 &6365520530095755179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1236257789494122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf3a51cab27c4525acb60dd89012a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 0}
+  zoomedInFOV: 60
+  zoomedOutSensitivity: 1000
+  zoomedInSensitivity: 750
 --- !u!1 &1326079549577358
 GameObject:
   m_ObjectHideFlags: 0

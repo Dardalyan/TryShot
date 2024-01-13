@@ -178,6 +178,7 @@ GameObject:
   - component: {fileID: 33705837635148522}
   - component: {fileID: 23860282398207496}
   - component: {fileID: 7205056455579801269}
+  - component: {fileID: 2327138650502049518}
   m_Layer: 0
   m_Name: AK74
   m_TagString: Untagged
@@ -266,8 +267,26 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cam: {fileID: 0}
-  range: 100
+  range: 50
   ammoSlot: {fileID: 0}
+  timeBetweenShots: 0.5
+  damage: 25
+--- !u!114 &2327138650502049518
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487774384131766}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aaf3a51cab27c4525acb60dd89012a96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerCam: {fileID: 0}
+  zoomedInFOV: 40
+  zoomedOutSensitivity: 1000
+  zoomedInSensitivity: 500
 --- !u!1 &1927369336514790
 GameObject:
   m_ObjectHideFlags: 0
