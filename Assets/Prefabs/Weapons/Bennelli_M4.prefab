@@ -104,6 +104,7 @@ MonoBehaviour:
   ammoSlot: {fileID: 0}
   timeBetweenShots: 2
   damage: 60
+  ammoType: 1
 --- !u!114 &6365520530095755179
 MonoBehaviour:
   m_ObjectHideFlags: 0

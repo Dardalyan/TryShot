@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -9,9 +10,15 @@ public class Weapon : MonoBehaviour
     [SerializeField] private Ammo ammoSlot;
     [SerializeField] private float timeBetweenShots = 0.5f;
     [SerializeField] private float damage = 25;
+    [SerializeField] private AmmoType ammoType;
 
     private bool canShoot = true;
-    
+
+    private void OnEnable()
+    {
+        canShoot = true;
+    }
+
     void Update()
     {
         if(Input.GetMouseButtonDown(0) && canShoot == true)
@@ -24,10 +31,10 @@ public class Weapon : MonoBehaviour
     {
         canShoot = false;
         
-        if (ammoSlot.GetCurrentAmmo() > 0)
+        if (ammoSlot.GetCurrentAmmo(ammoType) > 0)
         {
             ProcessRaycast();
-            ammoSlot.ReduceCurrentAmmo();
+            ammoSlot.ReduceCurrentAmmo(ammoType);
         }
 
         yield return new WaitForSeconds(timeBetweenShots);

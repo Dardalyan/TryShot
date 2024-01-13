@@ -507,6 +507,10 @@ PrefabInstance:
       propertyPath: range
       value: 25
       objectReference: {fileID: 0}
+    - target: {fileID: 4739995083739904498, guid: 8b0b86b42def11849a8eba21f4a6a684, type: 3}
+      propertyPath: ammoType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6365520530095755179, guid: 8b0b86b42def11849a8eba21f4a6a684, type: 3}
       propertyPath: playerCam
       value: 
@@ -658,6 +662,10 @@ PrefabInstance:
     - target: {fileID: 5109892577886532679, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
       propertyPath: range
       value: 40
+      objectReference: {fileID: 0}
+    - target: {fileID: 5109892577886532679, guid: 6f1a7354265853f44b0ed5e2e43676ad, type: 3}
+      propertyPath: ammoType
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

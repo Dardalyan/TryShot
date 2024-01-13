@@ -68,6 +68,7 @@
      <Compile Include="Assets/PlayerScripts/WeaponSwitcher.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/VertexJitter.cs" />
      <Compile Include="Assets/EnemyScripts/TrackPlayer.cs" />
+     <Compile Include="Assets/PlayerScripts/AmmoType.cs" />
      <Compile Include="Assets/PlayerScripts/PlayerHealth.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_DigitValidator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_FrameRateCounter.cs" />
