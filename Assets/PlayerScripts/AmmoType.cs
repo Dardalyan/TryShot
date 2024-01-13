@@ -2,6 +2,6 @@
 public enum AmmoType
 {
     AK74Bullets,
-    ShoutgunShells,
+    ShotgunShells,
     PistolBullets
 }

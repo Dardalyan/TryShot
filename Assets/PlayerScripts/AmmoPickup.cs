@@ -5,11 +5,13 @@ using UnityEngine;
 
 public class AmmoPickup : MonoBehaviour
 {
+    [SerializeField] private int ammoAmount = 5;
+    [SerializeField] private AmmoType ammoType;
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Player")
         {
-            Debug.Log("player picked up the ammo");
+            FindObjectOfType<Ammo>().IncreaseCurrentAmmo(ammoType, ammoAmount);
             Destroy(gameObject);
         }
     }

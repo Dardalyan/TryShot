@@ -206,6 +206,7 @@
      <None Include="Assets/TextMesh Pro/Sprites/EmojiOne.json" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_Sprite.shader" />
      <None Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts/Bangers - OFL.txt" />
+     <Folder Include="Assets/Prefabs/Pickups" />
      <Folder Include="Assets/Sprites/OccaSoftware/Crosshairs/Art/Textures" />
      <Reference Include="UnityEngine">
      <HintPath>/Applications/Unity/Unity.app/Contents/Managed/UnityEngine/UnityEngine.dll</HintPath>
