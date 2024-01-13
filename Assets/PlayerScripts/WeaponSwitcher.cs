@@ -1,11 +1,14 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class WeaponSwitcher : MonoBehaviour
 {
     [SerializeField] private int currentWeapon = 0;
+
+    [SerializeField] private GameObject player;
     
     void Start()
     {
@@ -18,6 +21,17 @@ public class WeaponSwitcher : MonoBehaviour
 
         ProcessKeyInput();
         ProcessScrollWheel();
+
+        if (currentWeapon == 3)
+        {
+            player.GetComponent<Swinging>().enabled = true;
+            player.GetComponent<Grappling>().enabled = true;
+        }
+        else
+        {
+            player.GetComponent<Swinging>().enabled = false;
+            player.GetComponent<Grappling>().enabled = false;
+        }
 
         if (previousWeapon != currentWeapon)
         {

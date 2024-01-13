@@ -1384,7 +1384,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 4205440872041537525, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
   m_PrefabInstance: {fileID: 2850257294626051384}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 980859957}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 908ee4ccf76c044a992625eb8bbbbdb1, type: 3}
@@ -3113,6 +3113,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 685499587}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &980859957 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1283639442094980559, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+  m_PrefabInstance: {fileID: 2850257294626051384}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1046252777
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11249,6 +11254,10 @@ PrefabInstance:
       propertyPath: ammoSlot
       value: 
       objectReference: {fileID: 336920137}
+    - target: {fileID: 4104508240731841597, guid: b4bdb9082d6764399a2b089827088509, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 980859957}
     - target: {fileID: 4681946270041361193, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: cameraPosition
       value: 
