@@ -58,9 +58,9 @@ public class Weapon : MonoBehaviour
         {
             Debug.Log("Hit: " + hit.transform.name);
             //add shooting effect
-            //set a target (getcomponent enemy health)
-            //if (target == null){return;}
-            //call enemy healt decrease method
+            enemyController target = hit.transform.GetComponent<enemyController>();
+            if (target == null){return;}
+            target.TakeDamage(damage);
         }
         else
         {

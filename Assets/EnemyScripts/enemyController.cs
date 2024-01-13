@@ -10,25 +10,34 @@ public class enemyController : MonoBehaviour
     private Ray ray;
     private NavMeshAgent _agent;
     private float _health;
+    private PlayerHealth target;
+    private float damage = 7.5f;
     
     
     // Start is called before the first frame update
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
-        _health = 200f;
+        _health = 100f;
+        target = FindObjectOfType<PlayerHealth>();
     }
 
     // Update is called once per frame
     void Update()
     {
         var iot = isOnTarget();
-        if(iot)
-            Debug.Log("On The TARGET !!!");
+        if (iot)
+        {
+            target.GetComponent<PlayerHealth>().TakeDamage(damage);
+        }
         die();
     }
-
-
+    
+    public void TakeDamage(float damage)
+    {
+        _health -= damage;
+    }
+    
     private void die()
     {
         if (_health <= 0)
@@ -74,7 +83,7 @@ public class enemyController : MonoBehaviour
 
         if (Physics.Raycast(ray, out  hit))
         {
-            if (hit.collider.gameObject.name == "user")
+            if (hit.collider.gameObject.name == "player")
             {
                 state = true;
             }

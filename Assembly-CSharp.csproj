@@ -58,6 +58,7 @@
      <Compile Include="Assets/PlayerScripts/PlayerMovement.cs" />
      <Compile Include="Assets/PlayerScripts/Swinging.cs" />
      <Compile Include="Assets/PlayerScripts/PlayerCam.cs" />
+     <Compile Include="Assets/PlayerScripts/PointSystem.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextSelector_A.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/Benchmark01_UGUI.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SimpleScript.cs" />

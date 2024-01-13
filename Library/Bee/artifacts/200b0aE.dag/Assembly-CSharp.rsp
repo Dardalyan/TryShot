@@ -376,6 +376,7 @@
 "Assets/PlayerScripts/PlayerCam.cs"
 "Assets/PlayerScripts/PlayerHealth.cs"
 "Assets/PlayerScripts/PlayerMovement.cs"
+"Assets/PlayerScripts/PointSystem.cs"
 "Assets/PlayerScripts/SceneLoader.cs"
 "Assets/PlayerScripts/Sliding.cs"
 "Assets/PlayerScripts/Swinging.cs"

@@ -5,7 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    public void LoadPlayerVSAI()
+    {
+        SceneManager.LoadScene("Scenes/PlayerVSAI");
+    }
+    
+    public void LoadPlayerVSZombies()
+    {
+        SceneManager.LoadScene("Scenes/PlayerVSZombies");
+    }
 
+    public void LoadTargetRange()
+    {
+        SceneManager.LoadScene("Scenes/TargetRange");
+    }
+    
     public void ReloadGame()
     {
         SceneManager.LoadScene("Scenes/Menu");
