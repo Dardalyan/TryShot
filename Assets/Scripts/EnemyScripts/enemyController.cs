@@ -11,28 +11,38 @@ public class enemyController : MonoBehaviour
     private NavMeshAgent _agent;
     private float _health;
     private PlayerHealth target;
-    private float damage = 7.5f;
     
     
+    // Start is called before the first frame update
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _health = 100f;
         target = FindObjectOfType<PlayerHealth>();
+        InvokeRepeating("HitTarget", 0f, 2f);
     }
-    
+
+    // Update is called once per frame
     void Update()
     {
         var iot = isOnTarget();
-        target.GetComponent<PlayerHealth>().TakeDamage(enemyFireDamage());
+        if(iot)
+            Debug.Log("On The TARGET !!!");
+        fire();
+        hitConfirmed();
         die();
     }
-    
+
+    private void HitTarget()
+    {
+        target.GetComponent<PlayerHealth>().TakeDamage(enemyFireDamage());
+    }
+
     public void TakeDamage(float damage)
     {
         _health -= damage;
     }
-    
+
     private void die()
     {
         if (_health <= 0)
@@ -45,6 +55,13 @@ public class enemyController : MonoBehaviour
     {
         if (_agent.isStopped)
         {
+            //Debug.Log("Fire!");
+            return true;
+        }   
+
+        if (isOnTarget())
+        {
+            //Debug.Log("Fire!");
             return true;
         }
         return false;
@@ -54,6 +71,7 @@ public class enemyController : MonoBehaviour
     {
         if (fire() && isOnTarget())
         {
+            //Debug.Log("Hit Confirmed !");
             return true;
         }
 
@@ -64,7 +82,7 @@ public class enemyController : MonoBehaviour
     {
         if (hitConfirmed())
         {
-            return 7.5f;
+            return 1f;
         }
 
         return 0f;
@@ -79,7 +97,7 @@ public class enemyController : MonoBehaviour
 
         if (Physics.Raycast(ray, out  hit))
         {
-            if (hit.collider.gameObject.name == "player")
+            if (hit.collider.gameObject.name == "PlayerObject")
             {
                 state = true;
             }
