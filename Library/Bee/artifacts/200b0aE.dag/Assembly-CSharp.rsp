@@ -364,6 +364,7 @@
 "Assets/Scripts/EnemyScripts/enemyController.cs"
 "Assets/Scripts/EnemyScripts/FindPlayer.cs"
 "Assets/Scripts/EnemyScripts/TrackPlayer.cs"
+"Assets/Scripts/EnemyScripts/ZFindPlayer.cs"
 "Assets/Scripts/EnemyScripts/ZombieController.cs"
 "Assets/Scripts/PlayerScripts/Ammo.cs"
 "Assets/Scripts/PlayerScripts/AmmoPickup.cs"
