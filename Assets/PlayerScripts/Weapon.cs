@@ -57,6 +57,11 @@ public class Weapon : MonoBehaviour
         if(Physics.Raycast(cam.position, cam.forward, out hit, range))
         {
             Debug.Log("Hit: " + hit.transform.name);
+            if (hit.transform.GetComponent<TargetSystem>())
+            {
+                FindObjectOfType<PointSystem>().AddToPoints();
+                hit.transform.gameObject.SetActive(false);
+            }
             //add shooting effect
             enemyController target = hit.transform.GetComponent<enemyController>();
             if (target == null){return;}

@@ -380,6 +380,8 @@
 "Assets/PlayerScripts/SceneLoader.cs"
 "Assets/PlayerScripts/Sliding.cs"
 "Assets/PlayerScripts/Swinging.cs"
+"Assets/PlayerScripts/TargetSystem.cs"
+"Assets/PlayerScripts/Timer.cs"
 "Assets/PlayerScripts/WallRunning.cs"
 "Assets/PlayerScripts/Weapon.cs"
 "Assets/PlayerScripts/WeaponSwitcher.cs"

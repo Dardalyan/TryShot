@@ -90,6 +90,7 @@
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/SkewTextExample.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/WarpTextExample.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TextMeshProFloatingText.cs" />
+     <Compile Include="Assets/PlayerScripts/Timer.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/ShaderPropAnimator.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/CameraController.cs" />
      <Compile Include="Assets/CharController.cs" />
@@ -99,6 +100,7 @@
      <Compile Include="Assets/PlayerScripts/Ammo.cs" />
      <Compile Include="Assets/PlayerScripts/Weapon.cs" />
      <Compile Include="Assets/PlayerScripts/Climbing.cs" />
+     <Compile Include="Assets/PlayerScripts/TargetSystem.cs" />
      <Compile Include="Assets/EnemyScripts/FindPlayer.cs" />
      <Compile Include="Assets/RotateCharacter.cs" />
      <Compile Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts/TMP_TextInfoDebugTool.cs" />
@@ -107,6 +109,7 @@
      <Folder Include="Assets/LowPolySoldiers_demo" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro.cginc" />
      <Folder Include="Assets/Desert Buildings/Textures" />
+     <Folder Include="Assets/Military target/Render" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Sprites" />
      <Folder Include="Assets/Prefabs" />
      <Folder Include="Assets/Model/Zombie 1" />
@@ -135,6 +138,7 @@
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF SSD.shader" />
      <Folder Include="Assets/TextMesh Pro/Resources" />
      <Folder Include="Assets/Sprites/OccaSoftware" />
+     <Folder Include="Assets/Military target/Materials" />
      <Folder Include="Assets/Desert Buildings/Models" />
      <Folder Include="Assets/LowPolySoldiers_demo 1/models" />
      <Folder Include="Assets/Fonts" />
@@ -143,6 +147,7 @@
      <Folder Include="Assets/TextMesh Pro" />
      <Folder Include="Assets/Desert_Fortification/Prefabs" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Fonts" />
+     <Folder Include="Assets/Military target/LODs" />
      <Folder Include="Assets/Materials" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Resources" />
      <Folder Include="Assets/LowPolySoldiers_demo 1/models/Materials/Materials" />
@@ -159,6 +164,7 @@
      <Folder Include="Assets/Prefabs/Weapons" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc" />
      <Folder Include="Assets/TextMesh Pro/Examples &amp; Extras/Scripts" />
+     <Folder Include="Assets/Military target" />
      <Folder Include="Assets/Model/Zombie 1/Model" />
      <None Include="Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc" />
      <Folder Include="Assets/LowPolySoldiers_demo 1/models/Materials" />
@@ -188,7 +194,9 @@
      <None Include="Assets/Sprites/OccaSoftware/Crosshairs/Readme.txt" />
      <Folder Include="Assets/Desert Buildings/Materials" />
      <Folder Include="Assets/Desert_Fortification/Show_Assets" />
+     <Folder Include="Assets/Military target/Prefabs" />
      <Folder Include="Assets/Desert_Fortification/Models" />
+     <Folder Include="Assets/Military target/Textures" />
      <None Include="Assets/TextMesh Pro/Shaders/TMP_SDF Overlay.shader" />
      <Folder Include="Assets/Model/Zombie 1/Materials" />
      <Folder Include="Assets/Desert_Fortification/Terxtures" />

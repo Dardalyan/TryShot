@@ -5,19 +5,23 @@ using UnityEngine.SceneManagement;
 
 public class SceneLoader : MonoBehaviour
 {
+    
     public void LoadPlayerVSAI()
     {
         SceneManager.LoadScene("Scenes/PlayerVSAI");
+        Time.timeScale = 1;
     }
     
     public void LoadPlayerVSZombies()
     {
         SceneManager.LoadScene("Scenes/PlayerVSZombies");
+        Time.timeScale = 1;
     }
 
     public void LoadTargetRange()
     {
         SceneManager.LoadScene("Scenes/TargetRange");
+        Time.timeScale = 1;
     }
     
     public void ReloadGame()

@@ -14,22 +14,17 @@ public class enemyController : MonoBehaviour
     private float damage = 7.5f;
     
     
-    // Start is called before the first frame update
     void Start()
     {
         _agent = GetComponent<NavMeshAgent>();
         _health = 100f;
         target = FindObjectOfType<PlayerHealth>();
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         var iot = isOnTarget();
-        if (iot)
-        {
-            target.GetComponent<PlayerHealth>().TakeDamage(damage);
-        }
+        target.GetComponent<PlayerHealth>().TakeDamage(enemyFireDamage());
         die();
     }
     
