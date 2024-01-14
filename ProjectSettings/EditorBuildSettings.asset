@@ -12,6 +12,9 @@ EditorBuildSettings:
     path: Assets/Scenes/PlayerVSAI.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
+    path: Assets/Scenes/PlayerVSZombies.unity
+    guid: 97925cefa29ec4da8a8f7a0b49dd902b
+  - enabled: 1
     path: Assets/Scenes/TargetRange.unity
     guid: 9308f53d29bfa48729f049515d3a418d
   m_configObjects: {}

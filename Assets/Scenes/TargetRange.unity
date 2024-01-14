@@ -1473,26 +1473,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: User
       objectReference: {fileID: 0}
-    - target: {fileID: 7321375608005095084, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
-      propertyPath: timerText
-      value: 
-      objectReference: {fileID: 272932266}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
---- !u!114 &272932266 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 842903804387159690, guid: 94be76c09cf524d8492ecaca4937125a, type: 3}
-  m_PrefabInstance: {fileID: 272932265}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &295886051 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3419916230185646022, guid: a4421c2dd35ce4983b09a8f52eff6b04, type: 3}

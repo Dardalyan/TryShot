@@ -38,6 +38,7 @@ public class enemyController : MonoBehaviour
         if (_health <= 0)
         {
             Destroy(gameObject);
+            FindObjectOfType<PointSystem>().AddToPoints();
         }
     }
     public bool fire()
