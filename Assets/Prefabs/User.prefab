@@ -1656,6 +1656,18 @@ PrefabInstance:
       propertyPath: predictionSphereCastRadius
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4205440872041537525, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: ammoSlots.Array.data[0].ammoAmount
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205440872041537525, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: ammoSlots.Array.data[1].ammoAmount
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4205440872041537525, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
+      propertyPath: ammoSlots.Array.data[2].ammoAmount
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 4284261597414023900, guid: 387976869338a4bf08f0990d0582b95d, type: 3}
       propertyPath: m_Positions.Array.data[1].z
       value: 0
@@ -2014,15 +2026,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8171345591223191609, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171345591223191609, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171345591223191609, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8171345591223191609, guid: b4bdb9082d6764399a2b089827088509, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
